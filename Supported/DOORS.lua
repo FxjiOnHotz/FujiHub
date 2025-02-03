@@ -11,10 +11,34 @@ local Window = Library.CreateLib("FujiHub v1 | DOORS 👁️", CustomTheme)
 
 -- Tabs
 
+local MainTab = Window:NewTab("Main")
 local PlayerTab = Window:NewTab("Player")
 local PromptsTab = Window:NewTab("Prompts")
 local VisualsTab = Window:NewTab("Visuals")
 local ModsTab = Window:NewTab("Mods")
+
+-- Main Tab
+
+local MainSection = MainTab:NewSection("Game Info")
+local MainSectionUI = MainTab:NewSection("UI")
+
+local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+
+MainSection:NewButton("Game Name: " .. GameName, "The game's name", function()
+    toClipboard(game.Name)
+end)
+
+MainSection:NewButton("PlaceId: " .. game.PlaceId, "The game's place id", function()
+    toClipboard(game.PlaceId)
+end)
+
+MainSection:NewButton("JobId: " .. game.JobId, "The game's job id", function()
+    toClipboard(game.JobId)
+end)
+
+MainSectionUI:NewKeybind("Toggle UI", "Key to toggle the gui.", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
 
 -- Player Tab
 
