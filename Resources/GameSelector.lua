@@ -16,6 +16,8 @@ local function SelectGame(Game)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/DOORS.lua"))()
     elseif Game == "Murder Mystery 2 🔪" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/MurderMystery2.lua"))()
+    elseif Game == "Flee The Facility 🔨" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/FleeTheFacility.lua"))()
     end
 end
 
@@ -29,7 +31,8 @@ local SelectSection = SelectorTab:NewSection("Select A Game")
 
 SelectSection:NewDropdown("Game Selector", "A list of games that we support.", {
     "DOORS 👁️", 
-    "Murder Mystery 2 🔪",}
+    "Murder Mystery 2 🔪",
+    "Flee The Facility 🔨"}
     , function(currentOption)
     Library:ToggleUI()
     SelectGame(currentOption)
