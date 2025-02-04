@@ -16,6 +16,7 @@ local BeastTab = Window:NewTab("Beast")
 local SurvivorTab = Window:NewTab("Survivor")
 
 local MainSection = MainTab:NewSection("Game Info")
+local MainSectionUI = MainTab:NewSection("UI")
 local PlayerSection = PlayerTab:NewSection("LocalPlayer")
 local VisualsSection = VisualsTab:NewSection("Visuals")
 local BeastSection = BeastTab:NewSection("Beast")
