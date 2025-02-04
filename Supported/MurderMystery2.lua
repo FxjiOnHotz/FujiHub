@@ -1,5 +1,5 @@
 local CustomTheme = {
-    SchemeColor = Color3.fromRGB(161, 3, 248),
+    SchemeColor = Color3.fromRGB(31, 51, 80),
     Background = Color3.fromRGB(25, 25, 25),
     Header = Color3.fromRGB(20, 20, 20),
     TextColor = Color3.fromRGB(255, 255, 255),
