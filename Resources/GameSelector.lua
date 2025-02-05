@@ -7,7 +7,7 @@ local CustomTheme = {
 }
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("FujiHub v1.0.3 | Game Selector", CustomTheme)
+local Window = Library.CreateLib("FujiHub v1.0.4 | Game Selector", CustomTheme)
 
 -- Main Function
 
@@ -18,6 +18,8 @@ local function SelectGame(Game)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/MurderMystery2.lua"))()
     elseif Game == "Flee The Facility 🔨" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/FleeTheFacility.lua"))()
+    elseif Game == "Identity Fraud 🖥️" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/IdentityFraud.lua"))()
     end
 end
 
@@ -32,7 +34,8 @@ local SelectSection = SelectorTab:NewSection("Select A Game")
 SelectSection:NewDropdown("Game Selector", "A list of games that we support.", {
     "DOORS 👁️", 
     "Murder Mystery 2 🔪",
-    "Flee The Facility 🔨"}
+    "Flee The Facility 🔨",
+    "Identity Fraud 🖥️"}
     , function(currentOption)
     Library:ToggleUI()
     SelectGame(currentOption)
