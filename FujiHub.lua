@@ -7,7 +7,7 @@ local CustomTheme = {
 }
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("FujiHub v1", CustomTheme)
+local Window = Library.CreateLib("FujiHub v1.0.4", CustomTheme)
 
 local EnteredKey = ""
 local Key = "appleslices"
