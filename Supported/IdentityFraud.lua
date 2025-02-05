@@ -36,7 +36,10 @@ local TS = game:GetService("TweenService")
 
 TeleportsSection:NewButton("Fix Cant Move Teleport Glitch", "Makes it so you can move.", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+end)
 
+TeleportsSection:NewButton("Fix Body Spazzing Glitch", "Makes it so your body wont spazz.", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Position = game.Players.LocalPlayer.Character.Torso.Position
 end)
 
 -- 766, 3, -102
