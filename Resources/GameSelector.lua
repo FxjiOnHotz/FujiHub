@@ -3,7 +3,6 @@
 
 -- Instances:
 
-local FujiHub = Instance.new("ScreenGui")
 local Background = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local Title = Instance.new("TextLabel")
@@ -44,17 +43,13 @@ local UICorner_13 = Instance.new("UICorner")
 
 --Properties:
 
-FujiHub.Name = "FujiHub"
-FujiHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-FujiHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
 Background.Name = "Background"
-Background.Parent = FujiHub
+Background.Parent = game.ServerStorage.FujiHub
 Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Background.BorderSizePixel = 0
 Background.Position = UDim2.new(0.278761059, 0, 0.246523395, 0)
-Background.Size = UDim2.new(0, 600, 0, 400)
+Background.Size = UDim2.new(0.442477882, 0, 0.505689025, 0)
 
 UICorner.CornerRadius = UDim.new(0, 12)
 UICorner.Parent = Background
@@ -66,7 +61,7 @@ Title.BackgroundTransparency = 1.000
 Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Title.BorderSizePixel = 0
 Title.Position = UDim2.new(0.0183333326, 0, 0.0299999993, 0)
-Title.Size = UDim2.new(0, 200, 0, 32)
+Title.Size = UDim2.new(0.333333343, 0, 0.0799999982, 0)
 Title.Font = Enum.Font.GothamBold
 Title.Text = "FujiHub"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -82,7 +77,7 @@ Version.BackgroundTransparency = 1.000
 Version.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Version.BorderSizePixel = 0
 Version.Position = UDim2.new(0.0183333326, 0, 0.109999999, 0)
-Version.Size = UDim2.new(0, 200, 0, 18)
+Version.Size = UDim2.new(0.333333343, 0, 0.0450000018, 0)
 Version.Font = Enum.Font.Gotham
 Version.Text = "v1.0.7"
 Version.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -97,7 +92,7 @@ Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Exit.BorderSizePixel = 0
 Exit.Position = UDim2.new(0.899999976, 0, 0.0299999993, 0)
-Exit.Size = UDim2.new(0, 50, 0, 50)
+Exit.Size = UDim2.new(0.0833333358, 0, 0.125, 0)
 Exit.AutoButtonColor = false
 Exit.Font = Enum.Font.SourceSansBold
 Exit.Text = "X"
@@ -114,7 +109,7 @@ GamesListFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 GamesListFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 GamesListFrame.BorderSizePixel = 0
 GamesListFrame.Position = UDim2.new(0.0183333326, 0, 0.189999968, 0)
-GamesListFrame.Size = UDim2.new(0, 256, 0, 314)
+GamesListFrame.Size = UDim2.new(0.426666677, 0, 0.785000026, 0)
 
 GamesScroller.Name = "GamesScroller"
 GamesScroller.Parent = GamesListFrame
@@ -209,7 +204,7 @@ GameData.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 GameData.BorderColor3 = Color3.fromRGB(0, 0, 0)
 GameData.BorderSizePixel = 0
 GameData.Position = UDim2.new(0.460000008, 0, 0.189999998, 0)
-GameData.Size = UDim2.new(0, 314, 0, 314)
+GameData.Size = UDim2.new(0.523333311, 0, 0.785000026, 0)
 
 UICorner_8.CornerRadius = UDim.new(0, 10)
 UICorner_8.Parent = GameData
@@ -221,7 +216,7 @@ Title_2.BackgroundTransparency = 1.000
 Title_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Title_2.BorderSizePixel = 0
 Title_2.Position = UDim2.new(0.034256272, 0, 0.0236306153, 0)
-Title_2.Size = UDim2.new(0, 297, 0, 32)
+Title_2.Size = UDim2.new(0.945859849, 0, 0.10191083, 0)
 Title_2.Visible = false
 Title_2.Font = Enum.Font.GothamBold
 Title_2.Text = "Murder Mystery 2"
@@ -238,7 +233,7 @@ Description.BackgroundTransparency = 1.000
 Description.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Description.BorderSizePixel = 0
 Description.Position = UDim2.new(0.034256272, 0, 0.125541732, 0)
-Description.Size = UDim2.new(0, 297, 0, 95)
+Description.Size = UDim2.new(0.945859849, 0, 0.302547783, 0)
 Description.Visible = false
 Description.Font = Enum.Font.Gotham
 Description.Text = "A game where you survive the murderer, kill the murderer, or become the murder and kill all players."
@@ -254,7 +249,7 @@ Execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Execute.BorderSizePixel = 0
 Execute.Position = UDim2.new(0.0318471342, 0, 0.474522293, 0)
-Execute.Size = UDim2.new(0, 297, 0, 41)
+Execute.Size = UDim2.new(0.945859849, 0, 0.130573243, 0)
 Execute.Visible = false
 Execute.AutoButtonColor = false
 Execute.Font = Enum.Font.GothamBold
@@ -275,7 +270,7 @@ Icon.BackgroundTransparency = 1.000
 Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Icon.BorderSizePixel = 0
 Icon.Position = UDim2.new(0.0235690232, 0, 0.097560972, 0)
-Icon.Size = UDim2.new(0, 32, 0, 32)
+Icon.Size = UDim2.new(0.107744105, 0, 0.780487776, 0)
 Icon.Image = "rbxassetid://12099513379"
 Icon.ImageColor3 = Color3.fromRGB(0, 0, 0)
 
@@ -285,7 +280,7 @@ ReportBug.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ReportBug.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ReportBug.BorderSizePixel = 0
 ReportBug.Position = UDim2.new(0.0318471342, 0, 0.834394932, 0)
-ReportBug.Size = UDim2.new(0, 297, 0, 41)
+ReportBug.Size = UDim2.new(0.945859849, 0, 0.130573243, 0)
 ReportBug.Visible = false
 ReportBug.AutoButtonColor = false
 ReportBug.Font = Enum.Font.GothamBold
@@ -306,7 +301,7 @@ Icon_2.BackgroundTransparency = 1.000
 Icon_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Icon_2.BorderSizePixel = 0
 Icon_2.Position = UDim2.new(0.0235690232, 0, 0.097560972, 0)
-Icon_2.Size = UDim2.new(0, 32, 0, 32)
+Icon_2.Size = UDim2.new(0.107744105, 0, 0.780487776, 0)
 Icon_2.Image = "rbxassetid://10165650767"
 Icon_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
 
@@ -317,7 +312,7 @@ ScriptLink.BackgroundTransparency = 1.000
 ScriptLink.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScriptLink.BorderSizePixel = 0
 ScriptLink.Position = UDim2.new(0.034256272, 0, 0.0236306153, 0)
-ScriptLink.Size = UDim2.new(0, 297, 0, 32)
+ScriptLink.Size = UDim2.new(0.945859849, 0, 0.10191083, 0)
 ScriptLink.Visible = false
 ScriptLink.Font = Enum.Font.GothamBold
 ScriptLink.Text = ""
@@ -334,7 +329,7 @@ PlaceId.BackgroundTransparency = 1.000
 PlaceId.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PlaceId.BorderSizePixel = 0
 PlaceId.Position = UDim2.new(0.034256272, 0, 0.0236306153, 0)
-PlaceId.Size = UDim2.new(0, 297, 0, 32)
+PlaceId.Size = UDim2.new(0.945859849, 0, 0.10191083, 0)
 PlaceId.Visible = false
 PlaceId.Font = Enum.Font.GothamBold
 PlaceId.Text = ""
@@ -350,7 +345,7 @@ Source.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Source.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Source.BorderSizePixel = 0
 Source.Position = UDim2.new(0.0318471342, 0, 0.652866244, 0)
-Source.Size = UDim2.new(0, 297, 0, 41)
+Source.Size = UDim2.new(0.945859849, 0, 0.130573243, 0)
 Source.Visible = false
 Source.AutoButtonColor = false
 Source.Font = Enum.Font.GothamBold
@@ -371,7 +366,7 @@ Icon_3.BackgroundTransparency = 1.000
 Icon_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Icon_3.BorderSizePixel = 0
 Icon_3.Position = UDim2.new(0.0235690232, 0, 0.097560972, 0)
-Icon_3.Size = UDim2.new(0, 32, 0, 32)
+Icon_3.Size = UDim2.new(0.107744105, 0, 0.780487776, 0)
 Icon_3.Image = "rbxassetid://11663743444"
 Icon_3.ImageColor3 = Color3.fromRGB(0, 0, 0)
 
@@ -381,7 +376,7 @@ Link.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 Link.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Link.BorderSizePixel = 0
 Link.Position = UDim2.new(-0.878980875, 0, -0.42993632, 0)
-Link.Size = UDim2.new(0, 454, 0, 50)
+Link.Size = UDim2.new(1.44585991, 0, 0.159235671, 0)
 Link.Visible = false
 Link.ClearTextOnFocus = false
 Link.Font = Enum.Font.SourceSans
@@ -401,7 +396,7 @@ Exit_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Exit_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Exit_2.BorderSizePixel = 0
 Exit_2.Position = UDim2.new(1.01453733, 0, -0.00999999978, 0)
-Exit_2.Size = UDim2.new(0, 139, 0, 50)
+Exit_2.Size = UDim2.new(0.306167394, 0, 1, 0)
 Exit_2.AutoButtonColor = false
 Exit_2.Font = Enum.Font.SourceSansBold
 Exit_2.Text = "Finish"
@@ -414,15 +409,15 @@ UICorner_13.Parent = Exit_2
 
 -- Scripts:
 
-local function RHKOXP_fake_script() -- Exit.Close 
+local function JEZVUR_fake_script() -- Exit.Close 
 	local script = Instance.new('LocalScript', Exit)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(RHKOXP_fake_script)()
-local function SVJY_fake_script() -- GamesScroller.LoadScript 
+coroutine.wrap(JEZVUR_fake_script)()
+local function GUDZ_fake_script() -- GamesScroller.LoadScript 
 	local script = Instance.new('LocalScript', GamesScroller)
 
 	local ScriptLink = script.Parent.Parent.Parent.GameData.ScriptLink
@@ -466,8 +461,8 @@ local function SVJY_fake_script() -- GamesScroller.LoadScript
 		end
 	end
 end
-coroutine.wrap(SVJY_fake_script)()
-local function TXPUOL_fake_script() -- Execute.ExecuteScript 
+coroutine.wrap(GUDZ_fake_script)()
+local function XCUVLVD_fake_script() -- Execute.ExecuteScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local Script = script.Parent.Parent.ScriptLink
@@ -476,8 +471,8 @@ local function TXPUOL_fake_script() -- Execute.ExecuteScript
 		loadstring(game:HttpGet(Script.Text))()
 	end)
 end
-coroutine.wrap(TXPUOL_fake_script)()
-local function QUJJ_fake_script() -- Source.SourceScript 
+coroutine.wrap(XCUVLVD_fake_script)()
+local function ZFLBXMO_fake_script() -- Source.SourceScript 
 	local script = Instance.new('LocalScript', Source)
 
 	local Script = script.Parent.Parent.ScriptLink
@@ -487,16 +482,16 @@ local function QUJJ_fake_script() -- Source.SourceScript
 		script.Parent.Parent.Link.Visible = true
 	end)
 end
-coroutine.wrap(QUJJ_fake_script)()
-local function IAJX_fake_script() -- Exit_2.Close 
+coroutine.wrap(ZFLBXMO_fake_script)()
+local function SCBXVT_fake_script() -- Exit_2.Close 
 	local script = Instance.new('LocalScript', Exit_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(IAJX_fake_script)()
-local function ICNHQRA_fake_script() -- Background.Smooth GUI Dragging 
+coroutine.wrap(SCBXVT_fake_script)()
+local function ZFOFNX_fake_script() -- Background.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Background)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -553,4 +548,4 @@ local function ICNHQRA_fake_script() -- Background.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(ICNHQRA_fake_script)()
+coroutine.wrap(ZFOFNX_fake_script)()
