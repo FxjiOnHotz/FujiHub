@@ -3,199 +3,177 @@
 
 -- Instances:
 
-local FujiHubLauncher = Instance.new("ScreenGui")
-local MainFrame = Instance.new("Frame")
-local Version = Instance.new("TextLabel")
+local FujiHub = Instance.new("ScreenGui")
+local Background = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
-local Divider = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
-local Date = Instance.new("TextLabel")
-local GamesList = Instance.new("Frame")
-local GamesScrollbar = Instance.new("ScrollingFrame")
-local MurderMystery2 = Instance.new("TextButton")
+local Version = Instance.new("TextLabel")
+local Exit = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
-local FleeTheFacility = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local DOORS = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
+local GamesListFrame = Instance.new("Frame")
+local GamesScroller = Instance.new("ScrollingFrame")
 local UIListLayout = Instance.new("UIListLayout")
+local MurderMystery2 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local FleeTheFacility = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
 local IdentityFraud = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
+local DOORS = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
-local Update = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
+local GameData = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
 local Title_2 = Instance.new("TextLabel")
-local Update_2 = Instance.new("TextLabel")
-local Time = Instance.new("TextLabel")
-local Close = Instance.new("TextButton")
+local Description = Instance.new("TextLabel")
+local Execute = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local Icon = Instance.new("ImageLabel")
+local ReportBug = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local Icon_2 = Instance.new("ImageLabel")
+local ScriptLink = Instance.new("TextLabel")
+local PlaceId = Instance.new("TextLabel")
+local Source = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local Icon_3 = Instance.new("ImageLabel")
+local Link = Instance.new("TextBox")
+local UICorner_12 = Instance.new("UICorner")
+local Exit_2 = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
 
 --Properties:
 
-FujiHubLauncher.Name = "FujiHubLauncher"
-FujiHubLauncher.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-FujiHubLauncher.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+FujiHub.Name = "FujiHub"
+FujiHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+FujiHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-MainFrame.Name = "MainFrame"
-MainFrame.Parent = FujiHubLauncher
-MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-MainFrame.BackgroundTransparency = 0.450
-MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-MainFrame.BorderSizePixel = 0
-MainFrame.Position = UDim2.new(0.278761059, 0, 0.227560043, 0)
-MainFrame.Size = UDim2.new(0, 600, 0, 430)
+Background.Name = "Background"
+Background.Parent = FujiHub
+Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Background.BorderSizePixel = 0
+Background.Position = UDim2.new(0.278761059, 0, 0.246523395, 0)
+Background.Size = UDim2.new(0, 600, 0, 400)
 
-Version.Name = "Version"
-Version.Parent = MainFrame
-Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Version.BackgroundTransparency = 1.000
-Version.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Version.BorderSizePixel = 0
-Version.Position = UDim2.new(0.0266666673, 0, 0.123255812, 0)
-Version.Size = UDim2.new(0, 61, 0, 23)
-Version.Font = Enum.Font.SourceSans
-Version.Text = "v1.0.5"
-Version.TextColor3 = Color3.fromRGB(255, 255, 255)
-Version.TextScaled = true
-Version.TextSize = 14.000
-Version.TextStrokeColor3 = Color3.fromRGB(31, 51, 80)
-Version.TextStrokeTransparency = 0.000
-Version.TextWrapped = true
-Version.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner.Parent = MainFrame
-
-Divider.Name = "Divider"
-Divider.Parent = MainFrame
-Divider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Divider.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Divider.BorderSizePixel = 0
-Divider.Position = UDim2.new(0.215000004, 0, 0.0325581394, 0)
-Divider.Size = UDim2.new(0, 2, 0, 62)
+UICorner.CornerRadius = UDim.new(0, 12)
+UICorner.Parent = Background
 
 Title.Name = "Title"
-Title.Parent = MainFrame
+Title.Parent = Background
 Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Title.BackgroundTransparency = 1.000
 Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Title.BorderSizePixel = 0
-Title.Position = UDim2.new(0.0266666673, 0, 0.0372093022, 0)
-Title.Size = UDim2.new(0, 115, 0, 37)
-Title.Font = Enum.Font.SourceSansBold
+Title.Position = UDim2.new(0.0183333326, 0, 0.0299999993, 0)
+Title.Size = UDim2.new(0, 200, 0, 32)
+Title.Font = Enum.Font.GothamBold
 Title.Text = "FujiHub"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextScaled = true
 Title.TextSize = 14.000
-Title.TextStrokeColor3 = Color3.fromRGB(31, 51, 80)
-Title.TextStrokeTransparency = 0.000
 Title.TextWrapped = true
 Title.TextXAlignment = Enum.TextXAlignment.Left
 
-Date.Name = "Date"
-Date.Parent = MainFrame
-Date.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Date.BackgroundTransparency = 1.000
-Date.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Date.BorderSizePixel = 0
-Date.Position = UDim2.new(0.23833333, 0, 0.0325581394, 0)
-Date.Size = UDim2.new(0, 354, 0, 35)
-Date.Font = Enum.Font.SourceSans
-Date.Text = "Date"
-Date.TextColor3 = Color3.fromRGB(255, 255, 255)
-Date.TextScaled = true
-Date.TextSize = 14.000
-Date.TextStrokeColor3 = Color3.fromRGB(31, 51, 80)
-Date.TextStrokeTransparency = 0.000
-Date.TextWrapped = true
-Date.TextXAlignment = Enum.TextXAlignment.Left
+Version.Name = "Version"
+Version.Parent = Background
+Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Version.BackgroundTransparency = 1.000
+Version.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Version.BorderSizePixel = 0
+Version.Position = UDim2.new(0.0183333326, 0, 0.109999999, 0)
+Version.Size = UDim2.new(0, 200, 0, 18)
+Version.Font = Enum.Font.Gotham
+Version.Text = "v1.0.5"
+Version.TextColor3 = Color3.fromRGB(255, 255, 255)
+Version.TextScaled = true
+Version.TextSize = 14.000
+Version.TextWrapped = true
+Version.TextXAlignment = Enum.TextXAlignment.Left
 
-GamesList.Name = "GamesList"
-GamesList.Parent = MainFrame
-GamesList.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-GamesList.BackgroundTransparency = 0.800
-GamesList.BorderColor3 = Color3.fromRGB(0, 0, 0)
-GamesList.BorderSizePixel = 0
-GamesList.Position = UDim2.new(0.0266666673, 0, 0.209302321, 0)
-GamesList.Size = UDim2.new(0, 221, 0, 324)
+Exit.Name = "Exit"
+Exit.Parent = Background
+Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(0.899999976, 0, 0.0299999993, 0)
+Exit.Size = UDim2.new(0, 50, 0, 50)
+Exit.AutoButtonColor = false
+Exit.Font = Enum.Font.SourceSansBold
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextWrapped = true
 
-GamesScrollbar.Name = "GamesScrollbar"
-GamesScrollbar.Parent = GamesList
-GamesScrollbar.Active = true
-GamesScrollbar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-GamesScrollbar.BackgroundTransparency = 2.000
-GamesScrollbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-GamesScrollbar.BorderSizePixel = 0
-GamesScrollbar.Position = UDim2.new(0, 0, 0.0370370373, 0)
-GamesScrollbar.Size = UDim2.new(1, 0, 0.962962985, 0)
-GamesScrollbar.ScrollBarThickness = 0
+UICorner_2.Parent = Exit
+
+GamesListFrame.Name = "GamesListFrame"
+GamesListFrame.Parent = Background
+GamesListFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+GamesListFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GamesListFrame.BorderSizePixel = 0
+GamesListFrame.Position = UDim2.new(0.0183333326, 0, 0.189999968, 0)
+GamesListFrame.Size = UDim2.new(0, 256, 0, 314)
+
+GamesScroller.Name = "GamesScroller"
+GamesScroller.Parent = GamesListFrame
+GamesScroller.Active = true
+GamesScroller.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GamesScroller.BackgroundTransparency = 1.000
+GamesScroller.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GamesScroller.BorderSizePixel = 0
+GamesScroller.Position = UDim2.new(0, 0, 0.0286624208, 0)
+GamesScroller.Size = UDim2.new(1, 0, 0.971337557, 0)
+GamesScroller.ScrollBarThickness = 0
+
+UIListLayout.Parent = GamesScroller
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 13)
 
 MurderMystery2.Name = "MurderMystery2"
-MurderMystery2.Parent = GamesScrollbar
-MurderMystery2.BackgroundColor3 = Color3.fromRGB(31, 51, 80)
+MurderMystery2.Parent = GamesScroller
+MurderMystery2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 MurderMystery2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MurderMystery2.BorderSizePixel = 0
-MurderMystery2.Position = UDim2.new(0.0610859729, 0, 0, 0)
-MurderMystery2.Size = UDim2.new(0, 195, 0, 33)
+MurderMystery2.Size = UDim2.new(0, 236, 0, 31)
 MurderMystery2.AutoButtonColor = false
-MurderMystery2.Font = Enum.Font.SourceSans
+MurderMystery2.Font = Enum.Font.GothamBold
 MurderMystery2.Text = "Murder Mystery 2"
 MurderMystery2.TextColor3 = Color3.fromRGB(255, 255, 255)
 MurderMystery2.TextScaled = true
 MurderMystery2.TextSize = 14.000
 MurderMystery2.TextWrapped = true
 
-UICorner_2.CornerRadius = UDim.new(0, 6)
-UICorner_2.Parent = MurderMystery2
+UICorner_3.CornerRadius = UDim.new(0, 6)
+UICorner_3.Parent = MurderMystery2
 
 FleeTheFacility.Name = "FleeTheFacility"
-FleeTheFacility.Parent = GamesScrollbar
-FleeTheFacility.BackgroundColor3 = Color3.fromRGB(31, 51, 80)
+FleeTheFacility.Parent = GamesScroller
+FleeTheFacility.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 FleeTheFacility.BorderColor3 = Color3.fromRGB(0, 0, 0)
 FleeTheFacility.BorderSizePixel = 0
-FleeTheFacility.Position = UDim2.new(0.0610859729, 0, 0, 0)
-FleeTheFacility.Size = UDim2.new(0, 195, 0, 33)
+FleeTheFacility.Size = UDim2.new(0, 236, 0, 31)
 FleeTheFacility.AutoButtonColor = false
-FleeTheFacility.Font = Enum.Font.SourceSans
+FleeTheFacility.Font = Enum.Font.GothamBold
 FleeTheFacility.Text = "Flee The Facility"
 FleeTheFacility.TextColor3 = Color3.fromRGB(255, 255, 255)
 FleeTheFacility.TextScaled = true
 FleeTheFacility.TextSize = 14.000
 FleeTheFacility.TextWrapped = true
 
-UICorner_3.CornerRadius = UDim.new(0, 6)
-UICorner_3.Parent = FleeTheFacility
-
-DOORS.Name = "DOORS"
-DOORS.Parent = GamesScrollbar
-DOORS.BackgroundColor3 = Color3.fromRGB(31, 51, 80)
-DOORS.BorderColor3 = Color3.fromRGB(0, 0, 0)
-DOORS.BorderSizePixel = 0
-DOORS.Position = UDim2.new(0.0723981932, 0, 0.256410271, 0)
-DOORS.Size = UDim2.new(0, 195, 0, 33)
-DOORS.AutoButtonColor = false
-DOORS.Font = Enum.Font.SourceSans
-DOORS.Text = "DOORS"
-DOORS.TextColor3 = Color3.fromRGB(255, 255, 255)
-DOORS.TextScaled = true
-DOORS.TextSize = 14.000
-DOORS.TextWrapped = true
-
 UICorner_4.CornerRadius = UDim.new(0, 6)
-UICorner_4.Parent = DOORS
-
-UIListLayout.Parent = GamesScrollbar
-UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, 7)
+UICorner_4.Parent = FleeTheFacility
 
 IdentityFraud.Name = "IdentityFraud"
-IdentityFraud.Parent = GamesScrollbar
-IdentityFraud.BackgroundColor3 = Color3.fromRGB(31, 51, 80)
+IdentityFraud.Parent = GamesScroller
+IdentityFraud.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 IdentityFraud.BorderColor3 = Color3.fromRGB(0, 0, 0)
 IdentityFraud.BorderSizePixel = 0
-IdentityFraud.Position = UDim2.new(0.0723981932, 0, 0.256410271, 0)
-IdentityFraud.Size = UDim2.new(0, 195, 0, 33)
+IdentityFraud.Size = UDim2.new(0, 236, 0, 31)
 IdentityFraud.AutoButtonColor = false
-IdentityFraud.Font = Enum.Font.SourceSans
+IdentityFraud.Font = Enum.Font.GothamBold
 IdentityFraud.Text = "Identity Fraud"
 IdentityFraud.TextColor3 = Color3.fromRGB(255, 255, 255)
 IdentityFraud.TextScaled = true
@@ -205,183 +183,374 @@ IdentityFraud.TextWrapped = true
 UICorner_5.CornerRadius = UDim.new(0, 6)
 UICorner_5.Parent = IdentityFraud
 
+DOORS.Name = "DOORS"
+DOORS.Parent = GamesScroller
+DOORS.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+DOORS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DOORS.BorderSizePixel = 0
+DOORS.Size = UDim2.new(0, 236, 0, 31)
+DOORS.AutoButtonColor = false
+DOORS.Font = Enum.Font.GothamBold
+DOORS.Text = "DOORS"
+DOORS.TextColor3 = Color3.fromRGB(255, 255, 255)
+DOORS.TextScaled = true
+DOORS.TextSize = 14.000
+DOORS.TextWrapped = true
+
 UICorner_6.CornerRadius = UDim.new(0, 6)
-UICorner_6.Parent = GamesList
+UICorner_6.Parent = DOORS
 
-Update.Name = "Update"
-Update.Parent = MainFrame
-Update.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-Update.BackgroundTransparency = 0.800
-Update.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Update.BorderSizePixel = 0
-Update.Position = UDim2.new(0.418333322, 0, 0.209302321, 0)
-Update.Size = UDim2.new(0, 336, 0, 324)
+UICorner_7.CornerRadius = UDim.new(0, 10)
+UICorner_7.Parent = GamesListFrame
 
-UICorner_7.Parent = Update
+GameData.Name = "GameData"
+GameData.Parent = Background
+GameData.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+GameData.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GameData.BorderSizePixel = 0
+GameData.Position = UDim2.new(0.460000008, 0, 0.189999998, 0)
+GameData.Size = UDim2.new(0, 314, 0, 314)
+
+UICorner_8.CornerRadius = UDim.new(0, 10)
+UICorner_8.Parent = GameData
 
 Title_2.Name = "Title"
-Title_2.Parent = Update
+Title_2.Parent = GameData
 Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Title_2.BackgroundTransparency = 1.000
 Title_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Title_2.BorderSizePixel = 0
-Title_2.Position = UDim2.new(0.0357142873, 0, 0.0185185187, 0)
-Title_2.Size = UDim2.new(0, 315, 0, 33)
-Title_2.Font = Enum.Font.SourceSansBold
-Title_2.Text = "Updates:"
+Title_2.Position = UDim2.new(0.034256272, 0, 0.0236306153, 0)
+Title_2.Size = UDim2.new(0, 297, 0, 32)
+Title_2.Visible = false
+Title_2.Font = Enum.Font.GothamBold
+Title_2.Text = "Murder Mystery 2"
 Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title_2.TextScaled = true
 Title_2.TextSize = 14.000
-Title_2.TextStrokeColor3 = Color3.fromRGB(31, 51, 80)
-Title_2.TextStrokeTransparency = 0.000
 Title_2.TextWrapped = true
 Title_2.TextXAlignment = Enum.TextXAlignment.Left
 
-Update_2.Name = "Update"
-Update_2.Parent = Update
-Update_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Update_2.BackgroundTransparency = 1.000
-Update_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Update_2.BorderSizePixel = 0
-Update_2.Position = UDim2.new(0.0357142873, 0, 0.120370373, 0)
-Update_2.Size = UDim2.new(0, 315, 0, 25)
-Update_2.Font = Enum.Font.SourceSans
-Update_2.Text = "Added support for \"Identity Fraud\"."
-Update_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Update_2.TextScaled = true
-Update_2.TextSize = 14.000
-Update_2.TextStrokeColor3 = Color3.fromRGB(31, 51, 80)
-Update_2.TextStrokeTransparency = 0.000
-Update_2.TextWrapped = true
-Update_2.TextXAlignment = Enum.TextXAlignment.Left
+Description.Name = "Description"
+Description.Parent = GameData
+Description.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Description.BackgroundTransparency = 1.000
+Description.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Description.BorderSizePixel = 0
+Description.Position = UDim2.new(0.034256272, 0, 0.125541732, 0)
+Description.Size = UDim2.new(0, 297, 0, 95)
+Description.Visible = false
+Description.Font = Enum.Font.Gotham
+Description.Text = "A game where you survive the murderer, kill the murderer, or become the murder and kill all players."
+Description.TextColor3 = Color3.fromRGB(255, 255, 255)
+Description.TextScaled = true
+Description.TextSize = 14.000
+Description.TextWrapped = true
+Description.TextXAlignment = Enum.TextXAlignment.Left
 
-Time.Name = "Time"
-Time.Parent = MainFrame
-Time.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Time.BackgroundTransparency = 1.000
-Time.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Time.BorderSizePixel = 0
-Time.Position = UDim2.new(0.23833333, 0, 0.113953486, 0)
-Time.Size = UDim2.new(0, 354, 0, 28)
-Time.Font = Enum.Font.SourceSans
-Time.Text = "Time"
-Time.TextColor3 = Color3.fromRGB(255, 255, 255)
-Time.TextScaled = true
-Time.TextSize = 14.000
-Time.TextStrokeColor3 = Color3.fromRGB(31, 51, 80)
-Time.TextStrokeTransparency = 0.000
-Time.TextWrapped = true
-Time.TextXAlignment = Enum.TextXAlignment.Left
+Execute.Name = "Execute"
+Execute.Parent = GameData
+Execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.0318471342, 0, 0.474522293, 0)
+Execute.Size = UDim2.new(0, 297, 0, 41)
+Execute.Visible = false
+Execute.AutoButtonColor = false
+Execute.Font = Enum.Font.GothamBold
+Execute.Text = "EXECUTE "
+Execute.TextColor3 = Color3.fromRGB(0, 0, 0)
+Execute.TextScaled = true
+Execute.TextSize = 14.000
+Execute.TextWrapped = true
+Execute.TextXAlignment = Enum.TextXAlignment.Right
 
-Close.Name = "Close"
-Close.Parent = MainFrame
-Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Close.BackgroundTransparency = 1.000
-Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Close.BorderSizePixel = 0
-Close.Position = UDim2.new(0.888333321, 0, 0.0325581394, 0)
-Close.Size = UDim2.new(0, 54, 0, 61)
-Close.Font = Enum.Font.SourceSansBold
-Close.Text = "X"
-Close.TextColor3 = Color3.fromRGB(31, 51, 80)
-Close.TextScaled = true
-Close.TextSize = 14.000
-Close.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-Close.TextStrokeTransparency = 0.000
-Close.TextWrapped = true
+UICorner_9.CornerRadius = UDim.new(0, 6)
+UICorner_9.Parent = Execute
+
+Icon.Name = "Icon"
+Icon.Parent = Execute
+Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon.BackgroundTransparency = 1.000
+Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Icon.BorderSizePixel = 0
+Icon.Position = UDim2.new(0.0235690232, 0, 0.097560972, 0)
+Icon.Size = UDim2.new(0, 32, 0, 32)
+Icon.Image = "rbxassetid://12099513379"
+Icon.ImageColor3 = Color3.fromRGB(0, 0, 0)
+
+ReportBug.Name = "ReportBug"
+ReportBug.Parent = GameData
+ReportBug.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ReportBug.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ReportBug.BorderSizePixel = 0
+ReportBug.Position = UDim2.new(0.0318471342, 0, 0.834394932, 0)
+ReportBug.Size = UDim2.new(0, 297, 0, 41)
+ReportBug.Visible = false
+ReportBug.AutoButtonColor = false
+ReportBug.Font = Enum.Font.GothamBold
+ReportBug.Text = "REPORT BUG "
+ReportBug.TextColor3 = Color3.fromRGB(0, 0, 0)
+ReportBug.TextScaled = true
+ReportBug.TextSize = 14.000
+ReportBug.TextWrapped = true
+ReportBug.TextXAlignment = Enum.TextXAlignment.Right
+
+UICorner_10.CornerRadius = UDim.new(0, 6)
+UICorner_10.Parent = ReportBug
+
+Icon_2.Name = "Icon"
+Icon_2.Parent = ReportBug
+Icon_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon_2.BackgroundTransparency = 1.000
+Icon_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Icon_2.BorderSizePixel = 0
+Icon_2.Position = UDim2.new(0.0235690232, 0, 0.097560972, 0)
+Icon_2.Size = UDim2.new(0, 32, 0, 32)
+Icon_2.Image = "rbxassetid://10165650767"
+Icon_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+
+ScriptLink.Name = "ScriptLink"
+ScriptLink.Parent = GameData
+ScriptLink.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptLink.BackgroundTransparency = 1.000
+ScriptLink.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptLink.BorderSizePixel = 0
+ScriptLink.Position = UDim2.new(0.034256272, 0, 0.0236306153, 0)
+ScriptLink.Size = UDim2.new(0, 297, 0, 32)
+ScriptLink.Visible = false
+ScriptLink.Font = Enum.Font.GothamBold
+ScriptLink.Text = ""
+ScriptLink.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptLink.TextScaled = true
+ScriptLink.TextSize = 14.000
+ScriptLink.TextWrapped = true
+ScriptLink.TextXAlignment = Enum.TextXAlignment.Left
+
+PlaceId.Name = "PlaceId"
+PlaceId.Parent = GameData
+PlaceId.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlaceId.BackgroundTransparency = 1.000
+PlaceId.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlaceId.BorderSizePixel = 0
+PlaceId.Position = UDim2.new(0.034256272, 0, 0.0236306153, 0)
+PlaceId.Size = UDim2.new(0, 297, 0, 32)
+PlaceId.Visible = false
+PlaceId.Font = Enum.Font.GothamBold
+PlaceId.Text = ""
+PlaceId.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlaceId.TextScaled = true
+PlaceId.TextSize = 14.000
+PlaceId.TextWrapped = true
+PlaceId.TextXAlignment = Enum.TextXAlignment.Left
+
+Source.Name = "Source"
+Source.Parent = GameData
+Source.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Source.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Source.BorderSizePixel = 0
+Source.Position = UDim2.new(0.0318471342, 0, 0.652866244, 0)
+Source.Size = UDim2.new(0, 297, 0, 41)
+Source.Visible = false
+Source.AutoButtonColor = false
+Source.Font = Enum.Font.GothamBold
+Source.Text = "SOURCE "
+Source.TextColor3 = Color3.fromRGB(0, 0, 0)
+Source.TextScaled = true
+Source.TextSize = 14.000
+Source.TextWrapped = true
+Source.TextXAlignment = Enum.TextXAlignment.Right
+
+UICorner_11.CornerRadius = UDim.new(0, 6)
+UICorner_11.Parent = Source
+
+Icon_3.Name = "Icon"
+Icon_3.Parent = Source
+Icon_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon_3.BackgroundTransparency = 1.000
+Icon_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Icon_3.BorderSizePixel = 0
+Icon_3.Position = UDim2.new(0.0235690232, 0, 0.097560972, 0)
+Icon_3.Size = UDim2.new(0, 32, 0, 32)
+Icon_3.Image = "rbxassetid://11663743444"
+Icon_3.ImageColor3 = Color3.fromRGB(0, 0, 0)
+
+Link.Name = "Link"
+Link.Parent = GameData
+Link.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Link.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Link.BorderSizePixel = 0
+Link.Position = UDim2.new(-0.878980875, 0, -0.42993632, 0)
+Link.Size = UDim2.new(0, 454, 0, 50)
+Link.Visible = false
+Link.ClearTextOnFocus = false
+Link.Font = Enum.Font.SourceSans
+Link.PlaceholderText = "Link Text"
+Link.Text = ""
+Link.TextColor3 = Color3.fromRGB(255, 255, 255)
+Link.TextScaled = true
+Link.TextSize = 14.000
+Link.TextWrapped = true
+
+UICorner_12.CornerRadius = UDim.new(0, 6)
+UICorner_12.Parent = Link
+
+Exit_2.Name = "Exit"
+Exit_2.Parent = Link
+Exit_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Exit_2.BorderSizePixel = 0
+Exit_2.Position = UDim2.new(1.01453733, 0, -0.00999999978, 0)
+Exit_2.Size = UDim2.new(0, 139, 0, 50)
+Exit_2.AutoButtonColor = false
+Exit_2.Font = Enum.Font.SourceSansBold
+Exit_2.Text = "Finish"
+Exit_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Exit_2.TextScaled = true
+Exit_2.TextSize = 14.000
+Exit_2.TextWrapped = true
+
+UICorner_13.Parent = Exit_2
 
 -- Scripts:
 
-local function QPZVZ_fake_script() -- Date.TimeScript 
-	local script = Instance.new('LocalScript', Date)
-
-	while true do
-		
-		local Unix = os.time()
-		
-	    local Date2 = script.Parent
-		Date2.Text = os.date("%m/%d/%Y", Unix)
-		
-		
-		task.wait(1)
-	end
-end
-coroutine.wrap(QPZVZ_fake_script)()
-local function YZCC_fake_script() -- GamesScrollbar.Main 
-	local script = Instance.new('LocalScript', GamesScrollbar)
-
-	for i, button in pairs(script.Parent:GetChildren()) do
-		if button:IsA("TextButton") then
-			button.MouseButton1Click:Connect(function()
-				if button.Name == "DOORS" then
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/DOORS.lua"))()
-				elseif button.Name == "MurderMystery2" then
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/MurderMystery2.lua"))()
-				elseif button.Name == "FleeTheFacility" then
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/FleeTheFacility.lua"))()
-				elseif button.Name == "IdentityFraud" then
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/IdentityFraud.lua"))()
-				end
-			end)
-		end
-	end
-end
-coroutine.wrap(YZCC_fake_script)()
-local function NDCVCBI_fake_script() -- Time.TimeScript 
-	local script = Instance.new('LocalScript', Time)
-
-	while true do
-		
-		local Unix = os.time()
-		
-	    local Time2 = script.Parent
-		Time2.Text = os.date("%I:%M %p", Unix)
-		
-		
-		task.wait(1)
-	end
-end
-coroutine.wrap(NDCVCBI_fake_script)()
-local function DTIFGZL_fake_script() -- Close.CloseGui 
-	local script = Instance.new('LocalScript', Close)
+local function RHKOXP_fake_script() -- Exit.Close 
+	local script = Instance.new('LocalScript', Exit)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(DTIFGZL_fake_script)()
-local function SMKPTC_fake_script() -- MainFrame.DraggableUI 
-	local script = Instance.new('LocalScript', MainFrame)
+coroutine.wrap(RHKOXP_fake_script)()
+local function SVJY_fake_script() -- GamesScroller.LoadScript 
+	local script = Instance.new('LocalScript', GamesScroller)
 
-	local FrameDetect = script.Parent
-	local FrameMoves = script.Parent
+	local ScriptLink = script.Parent.Parent.Parent.GameData.ScriptLink
 	
-	local RunService = game:GetService("RunService")
-	local UserInputService = game:GetService("UserInputService")
-	local CurrentMousePosition
-	local Detected = false
+	function ShowElements()
+		script.Parent.Parent.Parent.GameData.Execute.Visible = true
+		script.Parent.Parent.Parent.GameData.Source.Visible = true
+		script.Parent.Parent.Parent.GameData.ReportBug.Visible = true
+		script.Parent.Parent.Parent.GameData.Title.Visible = true
+		script.Parent.Parent.Parent.GameData.Description.Visible = true
+		script.Parent.Parent.Parent.GameData.ScriptLink.Visible = false
+		script.Parent.Parent.Parent.GameData.PlaceId.Visible = false
+	end
 	
-	FrameDetect.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 then
-			CurrentMousePosition = UserInputService:GetMouseLocation()
-			Detected = true
+	for i, button in pairs(script.Parent:GetChildren()) do
+		if button:IsA("TextButton") then
+			button.MouseButton1Click:Connect(function()
+				ShowElements()
+				if button.Name == "MurderMystery2" then
+					ScriptLink.Text = 'https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/MurderMystery2.lua'
+					script.Parent.Parent.Parent.GameData.PlaceId.Text = 142823291
+					script.Parent.Parent.Parent.GameData.Title.Text = "Murder Mystery 2"
+					script.Parent.Parent.Parent.GameData.Description.Text = "A game where you survive the murderer, kill the murderer, or become the murder and kill all players."
+				elseif button.Name == "FleeTheFacility" then
+					ScriptLink.Text = 'https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/FleeTheFacility.lua'
+					script.Parent.Parent.Parent.GameData.PlaceId.Text = 893973440
+					script.Parent.Parent.Parent.GameData.Title.Text = "Flee The Facility"
+					script.Parent.Parent.Parent.GameData.Description.Text = "A game where a group of 5 players max; one is randomly selected as a 'killer' and has to kill all players before they escape."
+				elseif button.Name == "IdentityFraud" then
+					ScriptLink.Text = 'https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/IdentityFraud.lua'
+					script.Parent.Parent.Parent.GameData.PlaceId.Text = 338521019
+					script.Parent.Parent.Parent.GameData.Title.Text = "Identity Fraud"
+					script.Parent.Parent.Parent.GameData.Description.Text = "A game where you have to escape mazes by solving puzzles in order to escape and destroy the final boss with different difficulties."
+				elseif button.Name == "DOORS" then
+					ScriptLink.Text = 'https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/DOORS.lua'
+					script.Parent.Parent.Parent.GameData.PlaceId.Text = 6839171747
+					script.Parent.Parent.Parent.GameData.Title.Text = "DOORS 👁️"
+					script.Parent.Parent.Parent.GameData.Description.Text = "A game where you open up doors and a random room generates behind it. You have to get to the final door in order to escape."
+				end
+			end)
 		end
-	end)
+	end
+end
+coroutine.wrap(SVJY_fake_script)()
+local function TXPUOL_fake_script() -- Execute.ExecuteScript 
+	local script = Instance.new('LocalScript', Execute)
+
+	local Script = script.Parent.Parent.ScriptLink
 	
-	FrameDetect.InputEnded:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 then
-			Detected = false
-		end
-	end)
-	
-	RunService.RenderStepped:Connect(function()
-		if Detected then
-			local MousePosition = UserInputService:GetMouseLocation()
-			local MoveX = CurrentMousePosition.X - MousePosition.X
-			local MoveY = CurrentMousePosition.Y - MousePosition.Y
-			CurrentMousePosition = MousePosition
-			FrameMoves.Position = FrameMoves.Position - UDim2.new(0,MoveX,0,MoveY)
-		end
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet(Script.Text))()
 	end)
 end
-coroutine.wrap(SMKPTC_fake_script)()
+coroutine.wrap(TXPUOL_fake_script)()
+local function QUJJ_fake_script() -- Source.SourceScript 
+	local script = Instance.new('LocalScript', Source)
+
+	local Script = script.Parent.Parent.ScriptLink
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Link.Text = Script.Text
+		script.Parent.Parent.Link.Visible = true
+	end)
+end
+coroutine.wrap(QUJJ_fake_script)()
+local function IAJX_fake_script() -- Exit_2.Close 
+	local script = Instance.new('LocalScript', Exit_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(IAJX_fake_script)()
+local function ICNHQRA_fake_script() -- Background.Smooth GUI Dragging 
+	local script = Instance.new('LocalScript', Background)
+
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI darg.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end
+coroutine.wrap(ICNHQRA_fake_script)()
