@@ -166,23 +166,15 @@ TextLabel.TextWrapped = true
 
 -- Scripts:
 
-local function LUSOTPX_fake_script() -- Exit.Close 
+local function OZDEL_fake_script() -- Exit.Close 
 	local script = Instance.new('LocalScript', Exit)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(LUSOTPX_fake_script)()
-local function UTJVJ_fake_script() -- GetLink.Close 
-	local script = Instance.new('LocalScript', GetLink)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Visible = false
-	end)
-end
-coroutine.wrap(UTJVJ_fake_script)()
-local function UHBE_fake_script() -- Submit.LocalScript 
+coroutine.wrap(OZDEL_fake_script)()
+local function CKLF_fake_script() -- Submit.LocalScript 
 	local script = Instance.new('LocalScript', Submit)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -196,8 +188,8 @@ local function UHBE_fake_script() -- Submit.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UHBE_fake_script)()
-local function KKHPH_fake_script() -- Background.Smooth GUI Dragging 
+coroutine.wrap(CKLF_fake_script)()
+local function ZURCI_fake_script() -- Background.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Background)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -254,4 +246,4 @@ local function KKHPH_fake_script() -- Background.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(KKHPH_fake_script)()
+coroutine.wrap(ZURCI_fake_script)()
