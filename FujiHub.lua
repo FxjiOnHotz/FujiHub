@@ -20,7 +20,7 @@ local UICorner_6 = Instance.new("UICorner")
 
 
 GUI.Name = "GUI"
-GUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+GUI.Parent = game.CoreGui
 
 Main.Name = "Main"
 Main.Parent = GUI
@@ -142,7 +142,7 @@ GuiRemoval.TextWrapped = true
 GuiRemoval.MouseButton1Down:connect(function()
 	GUI.Parent = nil
 	
-	game.StarterGui:SetCore("SendNotification", {Title = "Key System Closed", Text = "Exited FujiHub v1 Key System.", Icon = "", Duration = 5})
+	game.StarterGui:SetCore("SendNotification", {Title = "i hate you", Text = "i hate you now because you closed the script", Icon = "", Duration = 5})
 end)
 
 UICorner_6.Parent = GuiRemoval
