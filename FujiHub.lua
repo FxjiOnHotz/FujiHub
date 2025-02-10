@@ -96,7 +96,7 @@ VerifyButton.MouseButton1Down:connect(function()
 
 		tween:Play()
 		
-		game.StarterGui:SetCore("SendNotification", {Title = "correct key", Text = "welcome", Icon = "rbxassetid://12206884774", Duration = 5})
+		game.StarterGui:SetCore("SendNotification", {Title = "Welcome!", Text = "FujiHub v1", Icon = "rbxassetid://12206884774", Duration = 5})
 
 		wait(2)
 
@@ -141,8 +141,6 @@ GuiRemoval.TextSize = 42.000
 GuiRemoval.TextWrapped = true
 GuiRemoval.MouseButton1Down:connect(function()
 	GUI.Parent = nil
-	
-	game.StarterGui:SetCore("SendNotification", {Title = "i hate you", Text = "i hate you now because you closed the script", Icon = "", Duration = 5})
 end)
 
 UICorner_6.Parent = GuiRemoval
