@@ -89,7 +89,7 @@ VerifyButton.TextSize = 34.000
 VerifyButton.MouseButton1Down:connect(function()
 	if KeyBox.Text == suskey then
 		local TweenService = game:GetService("TweenService")
-		local key = game.Players.LocalPlayer.PlayerGui.GUI.Main.Key
+		local key = game.CoreGui.GUI.Main.Key
 		local info = TweenInfo.new(0.6, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false)
 
 		local tween = TweenService:Create(key, info, {ImageColor3 = Color3.fromRGB(106, 255, 106)})
