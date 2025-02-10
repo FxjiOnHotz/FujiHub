@@ -25,6 +25,8 @@ function SelectGame(currentOption)
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/FleeTheFacility.lua"))()
 	elseif currentOption == "Identity Fraud 🖥️" then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/IdentityFraud.lua"))()
+	elseif currentOption == "Dandy's World 🌈" then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/IdentityFraud.lua"))()
 	end
 end
 
@@ -32,7 +34,8 @@ GamesSection:NewDropdown("Select Game", "Select a game.", {
 "DOORS 👁️", 
 "Murder Mystery 2 🔪", 
 "Flee The Facility 🔨",
- "Identity Fraud 🖥️"}, function(currentOption)
+ "Identity Fraud 🖥️",
+"Dandy's World 🌈"}, function(currentOption)
     SelectGame(currentOption)
 	Library:ToggleUI()
 end)
