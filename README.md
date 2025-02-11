@@ -1,4 +1,4 @@
-# 🎮 FujiHub v.1.0.9
+# 🎮 FujiHub v.1.1.0
 
 Get the script here:
 
@@ -8,9 +8,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/re
 
 # ⭐ Update Log
 
-- Added "Dandy's World" game to the Script Hub.
-- New Key GUI
-- Huge update coming soon.
+- Added "Ninja Legends" game to the Script Hub.
 
 # 🎉 Games Supported:
 
@@ -19,3 +17,4 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/re
 - Flee The Facility 🔨
 - Identity Fraud 🖥️
 - Dandy's World 🌈
+- Ninja Legends ⚔️
