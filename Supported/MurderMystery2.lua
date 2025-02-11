@@ -1,5 +1,5 @@
 local CustomTheme = {
-    SchemeColor = Color3.fromRGB(208, 3, 255),
+    SchemeColor = Color3.fromRGB(73, 160, 194)
     Background = Color3.fromRGB(25, 25, 25),
     Header = Color3.fromRGB(20, 20, 20),
     TextColor = Color3.fromRGB(255, 255, 255),
@@ -7,100 +7,19 @@ local CustomTheme = {
 }
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("FujiHub v1 | Identity Fraud 🖥️", CustomTheme)
+local Window = Library.CreateLib("FujiHub v1 | MM2 🔪", CustomTheme)
 
 local MainTab = Window:NewTab("Main")
 local PlayerTab = Window:NewTab("Player")
-local MapTab = Window:NewTab("Map")
+local UtiltiesTab = Window:NewTab("Utilities")
 local VisualsTab = Window:NewTab("Visuals")
-local TeleportsTab = Window:NewTab("Teleports")
-local MiscTab = Window:NewTab("Misc")
+
 
 local MainSection = MainTab:NewSection("Game Info")
-local MapSection = MapTab:NewSection("Map Settings") --529, 5, -554
 local MainSectionUI = MainTab:NewSection("UI")
-local VisualsSection = VisualsTab:NewSection("Visuals")
-local PlayerSection = PlayerTab:NewSection("Player")
-local TeleportsSection = TeleportsTab:NewSection("Teleports")
-local MiscSection = MiscTab:NewSection("Other Scripts")
-
--- Misc Tab
-
-MiscSection:NewButton("Infinite Yield", "Loads infinite yield.", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
-
--- Teleports Tab
-
-local TS = game:GetService("TweenService")
-
-TeleportsSection:NewButton("Fix Cant Move Teleport Glitch", "Makes it so you can move.", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-end)
-
-TeleportsSection:NewButton("Fix Body Spazzing Glitch", "Makes it so your body wont spazz.", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Position = game.Players.LocalPlayer.Character.Torso.Position
-end)
-
--- 766, 3, -102
-
-TeleportsSection:NewButton("Go to Maze 1 Exit", "Teleports you to the Maze 1 exit.", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-	TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(30), {Position = Vector3.new(529, 5, -554)}):Play()
-    wait(30)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-end)
-
-TeleportsSection:NewButton("Go to Camp 1", "Teleports you to the Camp 1.", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-	TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(30), {Position = Vector3.new(956, 3, -548)}):Play()
-    wait(30)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-
-end)
-
-TeleportsSection:NewButton("Go to Camp 2", "Teleports you to the Camp 2.", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-	TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(30), {Position = Vector3.new(1339, 3, -487)}):Play()
-    wait(30)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-
-end)
-
-TeleportsSection:NewButton("Go to Camp 3", "Teleports you to the Camp 3.", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-	TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(30), {Position = Vector3.new(766, 3, -102)}):Play()
-    wait(30)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-
-end)
-
-TeleportsSection:NewButton("Go to Maze 2 Exit", "Teleports you to the Maze 2 exit.", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-	TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(30), {Position = Vector3.new(1419, 3, -42)}):Play()
-    wait(30)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-
-end)
-
-TeleportsSection:NewButton("Go to Radio (Maze 3)", "Teleports you to the Maze 3 radio.", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-	TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(30), {Position = Vector3.new(1802, 3, 275)}):Play()
-    wait(30)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-
-end)
-
---1419, 3, -42
-
-
--- Map Tab
-
-local MapSectionMaze1 = MapTab:NewSection("Maze 1")
-
-MapSectionMaze1:NewButton("Remove Fences", "Removes the metal gates.", function()
-	workspace.Map.Fences:Destroy()
-end)
+local PlayerSection = PlayerTab:NewSection("LocalPlayer")
+local UtilitiesSection = UtiltiesTab:NewSection("Utilities")
+local VisualsSection = VisualsTab:NewSection("Game Info")
 
 -- Player Tab
 
@@ -278,6 +197,44 @@ PlayerSection:NewSlider("FOV", "Sets your FOV", 120, 0, function(s) -- 500 (MaxV
 	game.Workspace.CurrentCamera.FieldOfView = s
 end)
 
+-- Utilities Tab
+
+local gunTPEnabled = false
+
+UtilitiesSection:NewToggle("Gun Teleport", "Automatically teleports you to the gun after sheriff dies.", function(state)
+    if state then
+        gunTPEnabled = true
+        while gunTPEnabled do
+            task.wait(.5)
+            print("searching")
+            -- Find GunDrop anywhere in the workspace
+            for _, obj in ipairs(workspace:GetDescendants()) do
+                if obj:IsA("BasePart") and obj.Name == "GunDrop" then
+                    -- Create ESP effect
+                    local position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.Position = obj.Position
+                    wait(0.5)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.Position = position
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.Position = game.Players.LocalPlayer.Character.UpperTorso
+                    break
+                end
+            end
+        end
+    else
+        gunTPEnabled = false
+    end
+end)
+
+UtilitiesSection:NewButton("Kill All (Must be spam clicking)", "Must be murderer", function()
+    for i, player in pairs(game.Players:GetChildren()) do
+        local plr = game.Players.LocalPlayer
+        local character = plr.Character
+        local hrp = character.HumanoidRootPart
+        hrp.CFrame = player.Character.HumanoidRootPart.CFrame
+        wait(1)
+    end
+end)
+
 -- Main Tab
 
 local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
@@ -300,95 +257,58 @@ end)
 
 -- Visuals Tab
 
-local Players = game:GetService("Players")
-
-VisualsSection:NewToggle("Radio ESP", "Shows every player.", function(state)
-    if state then
-       local highlight = Instance.new("Highlight")
-       highlight.Parent = workspace.Radio
-       highlight.FillColor = Color3.new(0,1,1)
+VisualsSection:NewButton("View All Roles ESP (Use after 10 second start)", "View everyone's role.", function()
+    for i, player in pairs(game.Players:GetChildren()) do
+    print(player.Name)
+    if player:FindFirstChild("Backpack"):FindFirstChild("Knife") or player.Character:FindFirstChild("Knife") then
+       print(player.Name .. " is the murder.")
+       local Highlight = Instance.new("Highlight")
+       Highlight.Parent = player.Character
+    elseif player:FindFirstChild("Backpack"):FindFirstChild("Gun") or player.Character:FindFirstChild("Gun") then
+       print(player.Name .. " is the sheriff.")
+       local Highlight = Instance.new("Highlight")
+       Highlight.Parent = player.Character
+       Highlight.FillColor = Color3.fromRGB(0,0,255)
     else
-        if workspace.Radio:FindFirstChild("Highlight") then
-            workspace.Radio:FindFirstChild("Highlight"):Destroy()
-        end
+local Highlight = Instance.new("Highlight")
+       Highlight.Parent = player.Character
+       Highlight.FillColor = Color3.fromRGB(0,255,0)
     end
+end
 end)
 
-VisualsSection:NewToggle("Player ESP", "Shows every player.", function(state)
+local gunESP = false
+
+VisualsSection:NewToggle("Gun ESP", "View the gun when the sheriff dies.", function(state)
     if state then
-        -- Enable ESP
-        for _, player in pairs(Players:GetChildren()) do
-            if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-                -- Create highlight
-                local highlight = Instance.new("Highlight")
-                highlight.Parent = player.Character
-                highlight.FillColor = Color3.fromRGB(0, 255, 0) -- Red color
-                highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
-                highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-
-                -- Create BillboardGui
-                local billboard = Instance.new("BillboardGui")
-                billboard.Size = UDim2.new(0, 100, 0, 50)
-                billboard.Adornee = player.Character:FindFirstChild("HumanoidRootPart")
-                billboard.StudsOffset = Vector3.new(0, 2, 0)
-                billboard.Parent = player.Character
-                billboard.AlwaysOnTop = true
-
-                -- Create text label
-                local textLabel = Instance.new("TextLabel")
-                textLabel.Size = UDim2.new(1, 0, 1, 0)
-                textLabel.BackgroundTransparency = 1
-                textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-                textLabel.TextStrokeTransparency = 0
-                textLabel.Text = player.Name
-                textLabel.Parent = billboard
+        gunESP = true
+        while gunESP do
+            if gunESP == false then
+                break
             end
-        end
-    else
-        -- Disable ESP
-        for _, player in pairs(Players:GetPlayers()) do
-            if player.Character then
-                if player.Character:FindFirstChild("Highlight") then
-                    player.Character.Highlight:Destroy()
-                end
-                for _, obj in pairs(player.Character:GetChildren()) do
-                    if obj:IsA("BillboardGui") then
-                        obj:Destroy()
+            task.wait(.5)
+            print("searching")
+            -- Find GunDrop anywhere in the workspace
+            for _, obj in ipairs(workspace:GetDescendants()) do
+                if obj:IsA("BasePart") and obj.Name == "GunDrop" then
+                    -- Create ESP effect
+                    
+                    local highlight = obj:FindFirstChild("Highlight")
+                    if not highlight then
+                        highlight = Instance.new("Highlight")
+                        highlight.Parent = obj
+                        highlight.FillColor = Color3.fromRGB(255, 255, 0) -- Green
+                        highlight.FillTransparency = 0.5
+                        highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
+                        highlight.OutlineTransparency = 0
                     end
                 end
             end
         end
+    else
+        gunESP = false
     end
 end)
 
--- Update ESP for new players
-Players.PlayerAdded:Connect(function(player)
-    player.CharacterAdded:Connect(function(character)
-        wait(1) -- Give time for character to load
-        if state then
-            -- Create highlight
-            local highlight = Instance.new("Highlight")
-            highlight.Parent = character
-            highlight.FillColor = Color3.fromRGB(255, 0, 0)
-            highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
-            highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
 
-            -- Create BillboardGui
-            local billboard = Instance.new("BillboardGui")
-            billboard.Size = UDim2.new(0, 100, 0, 50)
-            billboard.Adornee = character:FindFirstChild("HumanoidRootPart")
-            billboard.StudsOffset = Vector3.new(0, 2, 0)
-            billboard.Parent = character
-            billboard.AlwaysOnTop = true
 
-            -- Create text label
-            local textLabel = Instance.new("TextLabel")
-            textLabel.Size = UDim2.new(1, 0, 1, 0)
-            textLabel.BackgroundTransparency = 1
-            textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-            textLabel.TextStrokeTransparency = 0
-            textLabel.Text = player.Name
-            textLabel.Parent = billboard
-        end
-    end)
-end)
