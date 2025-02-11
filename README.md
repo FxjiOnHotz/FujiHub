@@ -18,3 +18,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/re
 - Identity Fraud 🖥️
 - Dandy's World 🌈
 - Ninja Legends ⚔️
+  
+# 📜 Preview
+
+![Screenshot 2025-02-10 204726](https://github.com/user-attachments/assets/f2ec321c-687a-467e-b1e0-396af6f314fb)
