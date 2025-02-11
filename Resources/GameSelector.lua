@@ -28,7 +28,7 @@ function SelectGame(currentOption)
 	elseif currentOption == "Dandy's World 🌈" then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/DandysWorld.lua"))()
 	elseif currentOption == "Ninja Legends ⚔️" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/IdentityFraud.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/NinjaLegends.lua"))()
 	end
 end
 
