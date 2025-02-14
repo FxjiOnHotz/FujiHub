@@ -302,7 +302,7 @@ end)
 
 local Players = game:GetService("Players")
 
-VisualsSection:NewToggle("Radio ESP", "Shows every player.", function(state)
+VisualsSection:NewToggle("Radio ESP", "Shows the radio in Maze 3.", function(state)
     if state then
        local highlight = Instance.new("Highlight")
        highlight.Parent = workspace.Radio
