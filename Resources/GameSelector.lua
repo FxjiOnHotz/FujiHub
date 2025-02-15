@@ -32,7 +32,7 @@ function SelectGame(currentOption)
 	elseif currentOption == "Build A Boat For Treasure ⛵" then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/BuildABoatForTreasure.lua"))()
 	elseif currentOption == "Basketball Legends 🏀" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/BuildABoatForTreasure.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/BasketballLegends.lua"))()
 	end
 end
 
