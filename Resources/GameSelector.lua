@@ -7,11 +7,11 @@ local CustomTheme = {
 }
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("FujiHub v1 | GAMES", CustomTheme)
+local Window = Library.CreateLib("FujiHub v1 | Game Selector", CustomTheme)
 
 -- Tabs
 
-local GamesTab = Window:NewTab("Games")
+local GamesTab = Window:NewTab("Selector")
 local GamesSection = GamesTab:NewSection("Game Selector")
 
 --  Game Selector
@@ -29,16 +29,19 @@ function SelectGame(currentOption)
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/DandysWorld.lua"))()
 	elseif currentOption == "Ninja Legends ⚔️" then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/NinjaLegends.lua"))()
+	elseif currentOption == "Build A Boat For Treasure ⛵" then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/BuildABoatForTreasure.lua"))()
 	end
 end
 
-GamesSection:NewDropdown("Select Game", "Select a game.", {
+GamesSection:NewDropdown("🎮 Select Game", "Select a game.", {
 "DOORS 👁️", 
 "Murder Mystery 2 🔪", 
 "Flee The Facility 🔨",
  "Identity Fraud 🖥️",
 "Dandy's World 🌈",
-"Ninja Legends ⚔️"}, function(currentOption)
+"Ninja Legends ⚔️",
+	"Build A Boat For Treasure ⛵"}, function(currentOption)
     SelectGame(currentOption)
 	Library:ToggleUI()
 end)
