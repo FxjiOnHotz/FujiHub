@@ -1,4 +1,4 @@
-# 🎮 FujiHub v.1.1.0
+# 🎮 FujiHub v.1.1.1
 
 Get the script here:
 
@@ -8,7 +8,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/re
 
 # ⭐ Update Log
 
-- Added "Ninja Legends" game to the Script Hub.
+- Added "Build A Boat For Treasure" game to the Script Hub.
 
 # 🎉 Games Supported:
 
@@ -18,6 +18,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/re
 - Identity Fraud 🖥️
 - Dandy's World 🌈
 - Ninja Legends ⚔️
+- Build A Boat For Treasure ⛵
   
 # 📜 Preview
 
