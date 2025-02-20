@@ -13,12 +13,20 @@ local Window = Library.CreateLib("FujiHub v1 | Shard Seekers ✨", CustomTheme)
 
 local MainTab = Window:NewTab("Main")
 local VisualsTab = Window:NewTab("Visuals")
+local UtiltiesTab = Window:NewTab("Utilties")
 
 -- Sections
 
 local MainSection = MainTab:NewSection("Game Info")
 local MainSectionUI = MainTab:NewSection("UI")
 local VisualsSection = VisualsTab:NewSection("Visuals")
+local UtilitiesSection = VisualsTab:NewSection("Utilties")
+
+-- Utilities Tab
+
+VisualsSection:NewToggle("Auto Interact Prompt", "", function(state)
+
+end)
 
 -- Visuals Tab
 
@@ -103,6 +111,10 @@ VisualsSection:NewButton("Shard ESP / Update ESP", "Needs to be pressed constant
 
                 if label.Text == "0.972549, 0.85098, 0.427451" then
                     label.Text = "Golden Shard"
+                end
+
+                if label.Text == "1, 0.447059, 0.447059" then
+                    label.Text = "Red Shard"
                 end
 
                 -- Deleted Shards
