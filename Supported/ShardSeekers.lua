@@ -53,8 +53,8 @@ VisualsSection:NewButton("Memory Shard ESP / Update ESP", "Needs to be pressed c
             label.Font = Enum.Font.GothamBold
             label.Size = UDim2.new(1, 0, 1, 0)
             label.TextScaled = true
-            label.TextColor3 = Color3.new(0,255,255)
-            label.Text = "[ Memory Shard ]"
+            label.TextColor3 = Color3.fromRGB(156, 254, 255)
+            label.Text = "Memory Shard"
             label.Parent = billboard
 
             item.Changed:Connect(function()
@@ -90,6 +90,30 @@ VisualsSection:NewButton("Shard ESP / Update ESP", "Needs to be pressed constant
                 label.TextColor3 = object.Color
                 label.Text = tostring(object.Color)
                 label.Parent = billboard
+
+                -- Renamed Shards
+
+                if label.Text == "0.74902, 0.498039, 1" then
+                    label.Text = "Purple Shard"
+                end
+
+                if label.Text == "0.596078, 0.682353, 0.858824" then
+                    label.Text = "Blue Shard"
+                end
+
+                if label.Text == "0.972549, 0.85098, 0.427451" then
+                    label.Text = "Golden Shard"
+                end
+
+                -- Deleted Shards
+
+                if label.Text == "0.811765, 0.686275, 0.615686" then
+                    billboard:Destroy()
+                end
+
+                if label.Text == "0.647059, 0.619608, 0.513726" then
+                    billboard:Destroy()
+                end
 
                 if label.Text == "0.564706, 1, 1" then
                     billboard:Destroy()
