@@ -35,6 +35,8 @@ function SelectGame(currentOption)
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/BasketballLegends.lua"))()
 	elseif currentOption == "Shard Seekers ✨" then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/ShardSeekers.lua"))()
+	elseif currentOption == "Kaiju Arisen 🐊" then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/KaijuArisen.lua"))()
 	end
 end
 
@@ -47,7 +49,8 @@ GamesSection:NewDropdown("🎮 Select Game", "Select a game.", {
 "Ninja Legends ⚔️",
 "Build A Boat For Treasure ⛵",
 "Basketball Legends 🏀",
-"Shard Seekers ✨"}, function(currentOption)
+"Shard Seekers ✨",
+"Kaiju Arisen 🐊"}, function(currentOption)
     SelectGame(currentOption)
 	Library:ToggleUI()
 end)
