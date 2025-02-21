@@ -396,10 +396,35 @@ MiscSection:NewButton("Enable Water Walk", "Lets you walk on the water.", functi
   local Players = game:GetService("Players")
   local VirtualInputManager = game:GetService("VirtualInputManager")
   local LocalPlayer = Players.LocalPlayer
-  local storedKey = "F" -- Default key if no key is entered
+  local storedKey = Enum.KeyCode.F -- Default key is "F"
+  
+  -- Function to convert input text to a valid Enum.KeyCode
+  local function getKeyCodeFromInput(input)
+      input = input:upper() -- Convert to uppercase (for letters)
+      
+      if tonumber(input) then
+          -- If input is a number, convert it to Enum.KeyCode for numbers (One, Two, etc.)
+          local numberKeys = {
+              ["0"] = Enum.KeyCode.Zero,
+              ["1"] = Enum.KeyCode.One,
+              ["2"] = Enum.KeyCode.Two,
+              ["3"] = Enum.KeyCode.Three,
+              ["4"] = Enum.KeyCode.Four,
+              ["5"] = Enum.KeyCode.Five,
+              ["6"] = Enum.KeyCode.Six,
+              ["7"] = Enum.KeyCode.Seven,
+              ["8"] = Enum.KeyCode.Eight,
+              ["9"] = Enum.KeyCode.Nine
+          }
+          return numberKeys[input] or Enum.KeyCode.F -- Default to "F" if invalid
+      else
+          -- Otherwise, assume it's a letter key
+          return Enum.KeyCode[input] or Enum.KeyCode.F -- Default to "F" if invalid
+      end
+  end
   
   TargetSection:NewTextBox("Enter Your Grab Keybind", "Enter your grab keybind to use Kill", function(txt)
-      storedKey = txt:upper() -- Converts to uppercase to match key codes
+      storedKey = getKeyCodeFromInput(txt)
   end)
   
   TargetSection:NewButton("Kill (Kaiju must have grab)", "Takes a player to the void.", function()
@@ -419,9 +444,9 @@ MiscSection:NewButton("Enable Water Walk", "Lets you walk on the water.", functi
                   
                   -- Simulate key press using Virtual Input Manager
                   task.wait(0.2) -- Small delay before pressing key
-                  VirtualInputManager:SendKeyEvent(true, Enum.KeyCode[storedKey], false, game) -- Key Down
+                  VirtualInputManager:SendKeyEvent(true, storedKey, false, nil) -- Key Down
                   task.wait(0.1)
-                  VirtualInputManager:SendKeyEvent(false, Enum.KeyCode[storedKey], false, game) -- Key Up
+                  VirtualInputManager:SendKeyEvent(false, storedKey, false, nil) -- Key Up
   
                   -- Wait 1.5 seconds, then teleport far away
                   task.wait(1.5)
