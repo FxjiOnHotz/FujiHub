@@ -126,7 +126,6 @@ end)
 
 local autoUltimate = false
 
-
 UtilitiesSection:NewButton("Rejoin", "Rejoins the game.", function()
     repeat
         wait()  
@@ -245,12 +244,12 @@ local function onJumpRequest()
 end
 
 -- Slider for setting JumpPower
+
 PlayerSection:NewSlider("Kaiju JumpPower", "", 500, 0, function(value)
     jumpPower = value
     setJumpPower()
 end)
 
--- Toggle for enabling/disabling infinite jump
 PlayerSection:NewToggle("Enable Kaiju JumpPower", "Starts/stops your kaiju jumppower that you set.", function(state)
     infiniteJumpEnabled = state
     if state then
@@ -263,7 +262,23 @@ PlayerSection:NewToggle("Enable Kaiju JumpPower", "Starts/stops your kaiju jumpp
     end
 end)
 
+--[[
 
+PlayerSection:NewButton("Set jumppower to 12 (Kick)", "Hewhehe", function()
+    jumpPower = 12
+    setJumpPower()
+end)
+
+PlayerSection:NewButton("Set jumppower to 21 (Use all moves)", "Hewhehe", function()
+    jumpPower = 21
+    setJumpPower()
+end)
+
+PlayerSection:NewButton("Set jumppower to 30 (Kill)", "Hewhehe", function()
+    jumpPower = 20
+    setJumpPower()
+end)
+]]--
 
 
 -- Autofarms Tab
@@ -336,6 +351,12 @@ end)
 
 
 -- Teleports Tab
+
+---524.849609, 100.358833, -118.635246, -0.798481107, 8.98718078e-09, -0.602019906, 1.80194206e-08, 1, -8.97143959e-09, 0.602019906, -1.80115745e-08, -0.798481107
+
+TeleportsSection:NewButton("Random ass spot tbh", "Teleports you to a random ass spot.", function()
+    game.Players.LocalPlayer.Character.PrimaryPart.CFrame = CFrame.new(524.849609, 100.358833, -118.635246, -0.798481107, 8.98718078e-09, -0.602019906, 1.80194206e-08, 1, -8.97143959e-09, 0.602019906, -1.80115745e-08, -0.798481107)
+end)
 
 TeleportsSection:NewButton("Secret Spot", "Teleports you to the game secrets spot.", function()
     game.Players.LocalPlayer.Character.PrimaryPart.CFrame = CFrame.new(2621.18652, 91.9103622, 1663.09705, 0.0579176806, -1.44405083e-08, 0.998321354, 4.54910705e-08, 1, 1.18256223e-08, -0.998321354, 4.4729795e-08, 0.0579176806)
