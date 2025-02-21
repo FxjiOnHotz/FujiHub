@@ -1,4 +1,3 @@
-```Lua
 local Players = game:GetService("Players")
 local VirtualInputManager = game:GetService("VirtualInputManager")
 
@@ -91,4 +90,3 @@ local button = createGUI()
 button.MouseButton1Click:Connect(function()
     startTeleportLoop(button)
 end)
-```
