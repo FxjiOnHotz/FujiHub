@@ -1,4 +1,4 @@
-# 🎮 FujiHub v.1.1.2
+# 🎮 FujiHub v.1.1.5
 
 Get the script here:
 
@@ -8,7 +8,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/re
 
 # ⭐ Update Log
 
-- Added "Basketball Legends" game to the Script Hub.
+- Added "Kaiju Arisen" game to the Script Hub.
+- Added "Ultimate Town Sandbox" game to the Script Hub.
+- Added "Shard Seekers" game to the Script Hub.
+
+- Fixed JumpPower not working on some scripts.
 
 # 🎉 Games Supported:
 
@@ -20,6 +24,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/re
 - Ninja Legends ⚔️
 - Build A Boat For Treasure ⛵
 - Basketball Legends 🏀
+- Kaiju Arisen 🐊
+- Ultimate Town Sandbox 🌲
+- Shard Seekers ✨
   
 # 📜 Preview
 
