@@ -49,7 +49,7 @@ PlayerSection:NewSlider("WalkSpeed", "Sets the walkspeed of the player.", 500, 0
 end)
 
 PlayerSection:NewSlider("JumpPower", "Sets the jumppower of the player.", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPoqwe = s
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
 PlayerSection:NewButton("Fullbright", "Makes everything bright", function()
