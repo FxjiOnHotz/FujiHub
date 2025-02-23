@@ -1,56 +1,66 @@
-local CustomTheme = {
-    SchemeColor = Color3.fromRGB(208, 3, 255),
-    Background = Color3.fromRGB(25, 25, 25),
-    Header = Color3.fromRGB(20, 20, 20),
-    TextColor = Color3.fromRGB(255, 255, 255),
-    ElementColor = Color3.fromRGB(20, 20, 20)
-}
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("FujiHub v1 | Game Selector", CustomTheme)
+local Window = Fluent:CreateWindow({
+    Title = "FujiHub",
+    SubTitle = "Game Selector",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true,
+    Theme = "Darker",
+    MinimizeKey = Enum.KeyCode.LeftControl
+})
 
--- Tabs
+-- Starting tab
+local FujiHubInfo = Window:AddTab({ Title = "FujiHub 🏠" })
+FujiHubInfo:AddParagraph({
+    Title = "Welcome to FujiHub!",
+    Content = "Choose a game below to execute its script or view its source code."
+})
+FujiHubInfo:AddButton({
+    Title = "Game Selector Info",
+    Description = "Click here for more information.",
+    Callback = function()
+        print("Welcome to FujiHub! Select a game tab to proceed.")
+    end
+})
 
-local GamesTab = Window:NewTab("Selector")
-local GamesSection = GamesTab:NewSection("Game Selector")
-
---  Game Selector
-
-function SelectGame(currentOption)
-	if currentOption == "DOORS 👁️" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/DOORS.lua"))()
-	elseif currentOption == "Murder Mystery 2 🔪" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/MurderMystery2.lua"))()
-	elseif currentOption == "Flee The Facility 🔨" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/FleeTheFacility.lua"))()
-	elseif currentOption == "Identity Fraud 🖥️" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/IdentityFraud.lua"))()
-	elseif currentOption == "Dandy's World 🌈" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/DandysWorld.lua"))()
-	elseif currentOption == "Ninja Legends ⚔️" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/NinjaLegends.lua"))()
-	elseif currentOption == "Build A Boat For Treasure ⛵" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/BuildABoatForTreasure.lua"))()
-	elseif currentOption == "Basketball Legends 🏀" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/BasketballLegends.lua"))()
-	elseif currentOption == "Shard Seekers ✨" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/ShardSeekers.lua"))()
-	elseif currentOption == "Kaiju Arisen 🐊" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/KaijuArisen.lua"))()
-	end
-end
-
-GamesSection:NewDropdown("🎮 Select Game", "Select a game.", {
-"DOORS 👁️", 
-"Murder Mystery 2 🔪", 
-"Flee The Facility 🔨",
- "Identity Fraud 🖥️",
-"Dandy's World 🌈",
-"Ninja Legends ⚔️",
-"Build A Boat For Treasure ⛵",
-"Basketball Legends 🏀",
-"Shard Seekers ✨",
-"Kaiju Arisen 🐊"}, function(currentOption)
-    SelectGame(currentOption)
-	Library:ToggleUI()
+-- Function to add elements to game tabs
+table.foreach({
+    DOORS = "DOORS 🚪",
+    MurderMystery2 = "Murder Mystery 2 🔪",
+    FleeTheFacility = "Flee The Facility 🔨",
+    IdentityFraud = "Identity Fraud 🖥️",
+    DandysWorld = "Dandy's World 🌈",
+    NinjaLegends = "Ninja Legends ⚔️",
+    BuildABoatForTreasure = "Build A Boat For Treasure ⛵",
+    ShardSeekers = "Shard Seekers ✨",
+    KaijuArisen = "Kaiju Arisen 🐊",
+    UltimateTownSandbox = "Ultimate Town Sandbox 🌲"
+}, function(varName, title)
+    _G[varName] = Window:AddTab({ Title = title })
+    
+    _G[varName]:AddParagraph({
+        Title = title .. " Info",
+        Content = "This tab contains scripts and options for " .. title .. "."
+    })
+    
+    _G[varName]:AddButton({
+        Title = "Execute Script",
+        Description = "Run the script for " .. title,
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/" .. varName .. ".lua"))()
+        end
+    })
+    
+    _G[varName]:AddButton({
+        Title = "View Source Code",
+        Description = "View the source for " .. title,
+        Callback = function()
+            setclipboard("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/" .. varName .. ".lua")
+            print("Copied source URL to clipboard!")
+        end
+    })
 end)
+
+-- Select the starting tab
+Window:SelectTab(FujiHubInfo)
