@@ -59,4 +59,11 @@ Tabs.Info:AddParagraph({
     Content = "This Roblox script was made out of pure premium scripting and gives the user a premium-experience and make them overpowered."
 })
 
+-- Credit Tab
+
+Tabs.Credits:AddParagraph({
+    Title = "Credits",
+    Content = "Owner/Scripter/Developer - f4jii. - Discord \n\n UI Libraries: \n\n Princelion33 - Kavo UI \n dawid - Fluent UI"
+})
+
 Window:SelectTab(1)
