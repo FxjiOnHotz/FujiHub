@@ -14,6 +14,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/re
 
 - Fixed JumpPower not working on some scripts.
 
+- Revamped Key GUI and Game Selector GUI. (Leaving script gui alone because Fluent UI doesn't have some features Kavo does.)
+
 # 🎉 Games Supported:
 
 - DOORS 👁️
