@@ -1,146 +1,77 @@
-local suskey = "appleslices"
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Resources/GameSelector.lua"))()
 
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
-local GUI = Instance.new("ScreenGui")
-local Main = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local Key = Instance.new("ImageLabel")
-local Text = Instance.new("TextLabel")
-local VerifyFrame = Instance.new("Frame")
-local KeyBox = Instance.new("TextBox")
-local UICorner_2 = Instance.new("UICorner")
-local VerifyButton = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local UICorner_4 = Instance.new("UICorner")
-local GetKey = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local GuiRemoval = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
+local Key = "6-7"
+local KeyEntered = nil
 
+local Window = Fluent:CreateWindow({
+    Title = "FujiHub",
+    SubTitle = "Key System",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true,
+    Theme = "Darker",
+    MinimizeKey = Enum.KeyCode.LeftControl
+})
 
+local Tabs = {
+    Key = Window:AddTab({ Title = "Key", Icon = "key" }),
+    Info = Window:AddTab({ Title = "About", Icon = "info" }),
+    Credits = Window:AddTab({ Title = "Credits", Icon = "star" }),
+}
 
-GUI.Name = "GUI"
-GUI.Parent = game.CoreGui
+-- Key Tab
 
-Main.Name = "Main"
-Main.Parent = GUI
-Main.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
-Main.BorderColor3 = Color3.fromRGB(27, 42, 53)
-Main.Position = UDim2.new(0.413353175, 0, 0.441176474, 0)
-Main.Size = UDim2.new(0.172441572, 0, 0.117647059, 0)
+Tabs.Key:AddInput("Key", {
+    Title = "Key",
+    Description = "Enter your key here.",
+    Placeholder = "Enter Key",
+    Numeric = false, -- Only allows numbers
+    Finished = false, -- Only calls callback when you press enter
+    Callback = function(Value)
+        KeyEntered = Value
+    end
+})
 
-UICorner.Parent = Main
+Tabs.Key:AddButton({
+    Title = "Get Key",
+    Callback = function()
+        setclipboard("https://sites.google.com/view/fujihubscript/home")
+        game.StarterGui:SetCore("SendNotification", {Title = "FujiHub", Text = "The key was copied into your clipboard.", Icon = "", Duration = 5})
+    end
+})
 
-Key.Name = "Key"
-Key.Parent = Main
-Key.BackgroundTransparency = 1.000
-Key.Position = UDim2.new(0.435148925, 0, 0.115340024, 0)
-Key.Size = UDim2.new(0.128056228, 0, 0.338304013, 0)
-Key.ZIndex = 2
-Key.Image = "rbxassetid://3926307971"
-Key.ImageColor3 = Color3.fromRGB(255, 38, 38)
-Key.ImageRectOffset = Vector2.new(44, 324)
-Key.ImageRectSize = Vector2.new(36, 36)
+Tabs.Key:AddButton({
+    Title = "Submit Key",
+    Callback = function()
+        if KeyEntered == Key then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Resources/GameSelector.lua"))()
+            Fluent:Destroy()
+        end
+    end
+})
 
-Text.Name = "Text"
-Text.Parent = Main
-Text.BackgroundColor3 = Color3.fromRGB(26, 26, 2)
-Text.BackgroundTransparency = 1.000
-Text.BorderColor3 = Color3.fromRGB(26, 26, 26)
-Text.Position = UDim2.new(0.0327102803, 0, 0.370000005, 0)
-Text.Size = UDim2.new(0.934579492, 0, 0.5, 0)
-Text.Font = Enum.Font.SourceSansSemibold
-Text.Text = "Key Required"
-Text.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text.TextSize = 35.000
-Text.TextWrapped = true
+-- About Tab
 
-VerifyFrame.Name = "Verify Frame"
-VerifyFrame.Parent = GUI
-VerifyFrame.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
-VerifyFrame.Position = UDim2.new(0.388749182, 0, 0.569411755, 0)
-VerifyFrame.Size = UDim2.new(0.222401291, 0, 0.15529412, 0)
+Tabs.Info:AddParagraph({
+    Title = "Information",
+    Content = "This Roblox script was made out of pure premium scripting and gives the user a premium-experience and make them overpowered."
+})
 
-KeyBox.Name = "Key Box"
-KeyBox.Parent = VerifyFrame
-KeyBox.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-KeyBox.Position = UDim2.new(0.216714069, 0, 0.0933334902, 0)
-KeyBox.Size = UDim2.new(0.552679658, 0, 0.298396379, 0)
-KeyBox.Font = Enum.Font.SourceSansSemibold
-KeyBox.PlaceholderColor3 = Color3.fromRGB(80, 80, 80)
-KeyBox.PlaceholderText = "Key"
-KeyBox.Text = ""
-KeyBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-KeyBox.TextScaled = true
-KeyBox.TextSize = 14.000
-KeyBox.TextWrapped = true
+Tabs.Info:AddParagraph({
+    Title = "The Goal",
+    Content = "The goal is to make players have fun playing Roblox because truth be told; it isn't as fun anymore. Roblox used to be fun and we made a lot of memories from it. But now when you grow up, your memories aren't the same. Your childhood is gone."
+})
 
-UICorner_2.Parent = KeyBox
+Tabs.Info:AddParagraph({
+    Title = "How To Get The Key",
+    Content = "To get the key, press on the 'Key' tab and press on get key. It copies a link to your clipboard which you paste in your browser. However don't worry about any linkvertises or lootlink's or anything like that. Over here, we want you to trust us and value our users."
+})
 
-VerifyButton.Name = "Verify Button"
-VerifyButton.Parent = VerifyFrame
-VerifyButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-VerifyButton.Position = UDim2.new(0.13767235, 0, 0.491583407, 0)
-VerifyButton.Size = UDim2.new(0.724637687, 0, 0.378787875, 0)
-VerifyButton.Font = Enum.Font.SourceSansSemibold
-VerifyButton.Text = "Verify Key"
-VerifyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-VerifyButton.TextSize = 34.000
-VerifyButton.MouseButton1Down:connect(function()
-	if KeyBox.Text == suskey then
-		local TweenService = game:GetService("TweenService")
-		local key = game.CoreGui.GUI.Main.Key
-		local info = TweenInfo.new(0.6, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false)
+-- Credits Tab
 
-		local tween = TweenService:Create(key, info, {ImageColor3 = Color3.fromRGB(106, 255, 106)})
-
-		tween:Play()
-		
-		game.StarterGui:SetCore("SendNotification", {Title = "Welcome!", Text = "FujiHub v1", Icon = "rbxassetid://12206884774", Duration = 5})
-
-		wait(2)
-
-		GUI:Destroy()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Resources/GameSelector.lua"))()
-
-
-	end
-end)
-
-UICorner_3.Parent = VerifyButton
-
-UICorner_4.Parent = VerifyFrame
-
-GetKey.Name = "GetKey"
-GetKey.Parent = VerifyFrame
-GetKey.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
-GetKey.Position = UDim2.new(0.235357329, 0, -1.38818645, 0)
-GetKey.Size = UDim2.new(0.505842388, 0, 0.447802067, 0)
-GetKey.Font = Enum.Font.SourceSansSemibold
-GetKey.Text = "Get Key"
-GetKey.TextColor3 = Color3.fromRGB(255, 255, 255)
-GetKey.TextSize = 42.000
-GetKey.TextWrapped = true
-GetKey.MouseButton1Down:connect(function()
-	setclipboard("https://sites.google.com/view/fujihubscript/home")
-	
-	game.StarterGui:SetCore("SendNotification", {Title = "FujiHub v1", Text = "The key was copied into your clipboard.", Icon = "", Duration = 5})
-end)
-
-UICorner_5.Parent = GetKey
-
-GuiRemoval.Name = "Gui Removal"
-GuiRemoval.Parent = VerifyFrame
-GuiRemoval.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
-GuiRemoval.Position = UDim2.new(2.59248304, 0, -0.608146846, 0)
-GuiRemoval.Size = UDim2.new(0.126419857, 0, 0.321553528, 0)
-GuiRemoval.Font = Enum.Font.SourceSansSemibold
-GuiRemoval.Text = "X"
-GuiRemoval.TextColor3 = Color3.fromRGB(255, 148, 148)
-GuiRemoval.TextSize = 42.000
-GuiRemoval.TextWrapped = true
-GuiRemoval.MouseButton1Down:connect(function()
-	GUI.Parent = nil
-end)
-
-UICorner_6.Parent = GuiRemoval
+Tabs.Credits:AddParagraph({
+    Title = "Credits",
+    Content = "Discord:\n\nf4jii. - Owner/Scripter/Developer \n\n Other: \n Kavo UI Library - Princelion33 \n Flunet UI Library - dawid"
+})
