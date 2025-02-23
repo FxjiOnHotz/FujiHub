@@ -33,6 +33,7 @@ table.foreach({
     DandysWorld = "Dandy's World 🌈",
     NinjaLegends = "Ninja Legends ⚔️",
     BuildABoatForTreasure = "Build A Boat For Treasure ⛵",
+    KaijuArisen = "Basketball Legends 🏀",
     ShardSeekers = "Shard Seekers ✨",
     KaijuArisen = "Kaiju Arisen 🐊",
     UltimateTownSandbox = "Ultimate Town Sandbox 🌲"
