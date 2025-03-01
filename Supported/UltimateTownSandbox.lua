@@ -1,15 +1,7 @@
 -- Best game ive played in terms of freedom and looks imo
 
-local CustomTheme = {
-    SchemeColor = Color3.fromRGB(0, 152, 36),
-    Background = Color3.fromRGB(25, 25, 25),
-    Header = Color3.fromRGB(20, 20, 20),
-    TextColor = Color3.fromRGB(255, 255, 255),
-    ElementColor = Color3.fromRGB(20, 20, 20)
-}
-
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("FujiHub v1 | Ultimate Town Sandbox", CustomTheme)
+local Window = Library.CreateLib("FujiHub v1 | Ultimate Town Sandbox", UITheme)
 
 -- Tabs
 
