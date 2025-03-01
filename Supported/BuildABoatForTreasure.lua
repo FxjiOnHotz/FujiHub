@@ -7,7 +7,7 @@ local CustomTheme = {
 }
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("FujiHub v1 | Build A Boat For Treasure ⛵", CustomTheme)
+local Window = Library.CreateLib("FujiHub v1 | Build A Boat For Treasure", CustomTheme)
 
 -- Services
 
