@@ -7,7 +7,7 @@ local CustomTheme = {
 }
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("FujiHub v1 | Dandy's World 🌈", CustomTheme)
+local Window = Library.CreateLib("FujiHub v1 | Dandy's World", CustomTheme)
 
 -- Tabs
 
