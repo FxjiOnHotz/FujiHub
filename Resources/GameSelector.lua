@@ -10,33 +10,19 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl
 })
 
--- Starting tab
-local FujiHubInfo = Window:AddTab({ Title = "FujiHub 🏠" })
-FujiHubInfo:AddParagraph({
-    Title = "Welcome to FujiHub!",
-    Content = "Choose a game below to execute its script or view its source code."
-})
-FujiHubInfo:AddButton({
-    Title = "Game Selector Info",
-    Description = "Click here for more information.",
-    Callback = function()
-        print("Welcome to FujiHub! Select a game tab to proceed.")
-    end
-})
-
 -- Function to add elements to game tabs
 table.foreach({
-    DOORS = "DOORS 🚪",
-    MurderMystery2 = "Murder Mystery 2 🔪",
-    FleeTheFacility = "Flee The Facility 🔨",
-    IdentityFraud = "Identity Fraud 🖥️",
-    DandysWorld = "Dandy's World 🌈",
-    NinjaLegends = "Ninja Legends ⚔️",
-    BuildABoatForTreasure = "Build A Boat For Treasure ⛵",
-    BasketballLegends = "Basketball Legends 🏀",
-    ShardSeekers = "Shard Seekers ✨",
-    KaijuArisen = "Kaiju Arisen 🐊",
-    UltimateTownSandbox = "Ultimate Town Sandbox 🌲"
+    DOORS = "DOORS",
+    MurderMystery2 = "Murder Mystery 2",
+    FleeTheFacility = "Flee The Facility",
+    IdentityFraud = "Identity Fraud",
+    DandysWorld = "Dandy's World",
+    NinjaLegends = "Ninja Legends",
+    BuildABoatForTreasure = "Build A Boat For Treasure",
+    BasketballLegends = "Basketball Legends",
+    ShardSeekers = "Shard Seekers",
+    KaijuArisen = "Kaiju Arisen",
+    UltimateTownSandbox = "Ultimate Town Sandbox"
 }, function(varName, title)
     _G[varName] = Window:AddTab({ Title = title })
     
