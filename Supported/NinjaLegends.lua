@@ -7,7 +7,7 @@ local CustomTheme = {
 }
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("FujiHub v1 | Ninja Legends ⚔️", CustomTheme)
+local Window = Library.CreateLib("FujiHub v1 | Ninja Legends", CustomTheme)
 
 -- Services
 
