@@ -23,7 +23,8 @@ local GamesList = {
     BasketballLegends = "Basketball Legends 🏀",
     ShardSeekers = "Shard Seekers ✨",
     KaijuArisen = "Kaiju Arisen 🐊",
-    UltimateTownSandbox = "Ultimate Town Sandbox 🌲"
+    UltimateTownSandbox = "Ultimate Town Sandbox 🌲",
+    PillarChase2 = "Pillar Chase 2 👹"
 }
 
 local Main = Window:AddTab({ Title = "Game Selector" })
@@ -68,6 +69,8 @@ Main:AddButton({
             loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/KaijuArisen.lua"))()
         elseif TargetGame == GamesList.UltimateTownSandbox then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/UltimateTownSandbox.lua"))()
+        elseif TargetGame == GamesList.PillarChase2 then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/PillarChase2.lua"))()
         end
     end
 })
