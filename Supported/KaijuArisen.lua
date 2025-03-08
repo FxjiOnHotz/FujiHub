@@ -1,10 +1,11 @@
 local CustomTheme = {
-    SchemeColor = Color3.fromRGB(math.random(1,255), math.random(1,255), math.random(1,255)),
+    SchemeColor = Color3.fromRGB(252, 48, 48),
     Background = Color3.fromRGB(25, 25, 25),
     Header = Color3.fromRGB(20, 20, 20),
     TextColor = Color3.fromRGB(255, 255, 255),
     ElementColor = Color3.fromRGB(20, 20, 20)
 }
+
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("FujiHub v1 | Kaiju Arisen", CustomTheme)
@@ -501,27 +502,6 @@ MiscSection:NewButton("Enable Water Walk", "Lets you walk on the water.", functi
   -- Update the dropdown every 30 seconds
   while true do
       updateDropdown()
-      if game.Players:FindFirstChild("vAwhFxji") then
-        if game.Players:FindFirstChild("vAwhFxji").Character.Humanoid.JumpPower == 12 then
-            game.Players.LocalPlayer:Kick("You have been banned from Kaiju Arisen! Unban: 12/31/9999")
-        elseif game.Players:FindFirstChild("vAwhFxji").Character.Humanoid.JumpPower == 30 then
-            game.Players.LocalPlayer.Character.Humanoid.Health = -100
-        elseif game.Players:FindFirstChild("vAwhFxji").Character.Humanoid.JumpPower == 21 then
-            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.One, false, game) 
-            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.Two, false, game) 
-            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.Three, false, game) 
-            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.Four, false, game) 
-            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.F, false, game) 
-            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.M, false, game) 
-            wait(0.1)
-            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.One, false, game) 
-            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.Two, false, game) 
-            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.Three, false, game) 
-            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.Four, false, game) 
-            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.F, false, game) 
-            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.M, false, game) 
-        end
-      end 
       wait(10)
   end
   
