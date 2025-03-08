@@ -5,7 +5,7 @@ local Window = Fluent:CreateWindow({
     SubTitle = "Game Selector",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
-    Acrylic = true,
+    Acrylic = false,
     Theme = "Darker",
     MinimizeKey = Enum.KeyCode.LeftControl
 })
