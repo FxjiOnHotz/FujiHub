@@ -24,7 +24,8 @@ local GamesList = {
     ShardSeekers = "Shard Seekers ✨",
     KaijuArisen = "Kaiju Arisen 🐊",
     UltimateTownSandbox = "Ultimate Town Sandbox 🌲",
-    PillarChase2 = "Pillar Chase 2 👹"
+    PillarChase2 = "Pillar Chase 2 👹",
+    MonsterMetro = "Monster Metro 🔴"
 }
 
 local Main = Window:AddTab({ Title = "Game Selector" })
@@ -36,7 +37,7 @@ local GamesDropdown = Main:AddDropdown("Games", {
     Description = "Sets the game to execute.",
     Values = GamesList,
     Multi = false,
-    Default = 1,
+    Default = "Select...",
 })
 
 GamesDropdown:OnChanged(function(Value)
@@ -71,6 +72,10 @@ Main:AddButton({
             loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/UltimateTownSandbox.lua"))()
         elseif TargetGame == GamesList.PillarChase2 then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/PillarChase2.lua"))()
+        elseif TargetGame == GamesList.MonsterMetro then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/MonsterMetro.lua"))()
         end
     end
 })
+
+Window:SelectTab(1)
