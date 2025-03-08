@@ -1,7 +1,5 @@
--- Best game ive played in terms of freedom and looks imo
-
 local CustomTheme = {
-    SchemeColor = Color3.fromRGB(math.random(1,255), math.random(1,255), math.random(1,255)),
+    SchemeColor = Color3.fromRGB(252, 48, 48),
     Background = Color3.fromRGB(25, 25, 25),
     Header = Color3.fromRGB(20, 20, 20),
     TextColor = Color3.fromRGB(255, 255, 255),
