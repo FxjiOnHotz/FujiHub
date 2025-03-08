@@ -1,5 +1,5 @@
 local CustomTheme = {
-    SchemeColor = Color3.fromRGB(math.random(1,255), math.random(1,255), math.random(1,255)),
+    SchemeColor = Color3.fromRGB(252, 48, 48),
     Background = Color3.fromRGB(25, 25, 25),
     Header = Color3.fromRGB(20, 20, 20),
     TextColor = Color3.fromRGB(255, 255, 255),
@@ -17,7 +17,7 @@ local TeleportsTab = Window:NewTab("Teleports")
 local MiscTab = Window:NewTab("Misc")
 
 local MainSection = MainTab:NewSection("Game Info")
-local MapSection = MapTab:NewSection("Map Settings") --529, 5, -554
+local MapSection = MapTab:NewSection("Map Settings")
 local MainSectionUI = MainTab:NewSection("UI")
 local VisualsSection = VisualsTab:NewSection("Visuals")
 local PlayerSection = PlayerTab:NewSection("Player")
