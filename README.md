@@ -29,6 +29,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/re
 - Kaiju Arisen 🐊
 - Ultimate Town Sandbox 🌲
 - Shard Seekers ✨
+- Pillar Chase 2 👹
+- Monster Metro 🔴
+- Flood Escape Classic 🌊
   
 # 📜 Preview
 
