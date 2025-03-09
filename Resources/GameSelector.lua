@@ -25,7 +25,8 @@ local GamesList = {
     KaijuArisen = "Kaiju Arisen 🐊",
     UltimateTownSandbox = "Ultimate Town Sandbox 🌲",
     PillarChase2 = "Pillar Chase 2 👹",
-    MonsterMetro = "Monster Metro 🔴"
+    MonsterMetro = "Monster Metro 🔴",
+    FloodEscapeClassic = "Flood Escape Classic 🌊"
 }
 
 local Main = Window:AddTab({ Title = "Game Selector" })
@@ -74,6 +75,8 @@ Main:AddButton({
             loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/PillarChase2.lua"))()
         elseif TargetGame == GamesList.MonsterMetro then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/MonsterMetro.lua"))()
+        elseif TargetGame == GamesList.FloodEscapeClassic then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/Supported/FloodEscapeClassic.lua"))()
         end
     end
 })
