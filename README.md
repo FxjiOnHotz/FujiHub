@@ -6,15 +6,9 @@ Get the script here:
 loadstring(game:HttpGet("https://raw.githubusercontent.com/FxjiOnHotz/FujiHub/refs/heads/main/FujiHub.lua"))()
 ```
 
-# ⭐ Update Log
+# 🛠️ Bug Fixes:
 
-- Added "Kaiju Arisen" game to the Script Hub.
-- Added "Ultimate Town Sandbox" game to the Script Hub.
-- Added "Shard Seekers" game to the Script Hub.
-
-- Fixed JumpPower not working on some scripts.
-
-- Revamped Key GUI and Game Selector GUI. (Leaving script gui alone because Fluent UI doesn't have some features Kavo does.)
+Removed random color and set color to red.
 
 # 🎉 Games Supported:
 
